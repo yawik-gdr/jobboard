@@ -32,7 +32,7 @@
 
 <script>
 import { GET_SETTINGS, SET_SETTINGS } from '../store/names';
-import { mapMutations, mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 import { useQuasar } from 'quasar';
 
 export default {
@@ -42,7 +42,7 @@ export default {
     ...mapGetters([GET_SETTINGS]),
     defaultLanguage()
     {
-      console.log(this[GET_SETTINGS]);
+      console.log('Settings ' + this[GET_SETTINGS]);
       return this[GET_SETTINGS].defaultLanguage;
     }
   },
@@ -61,11 +61,14 @@ export default {
   },
   methods:
   {
-    ...mapMutations([SET_SETTINGS]),
+    // ...mapMutations([SET_SETTINGS]),
+    // ...mapActions([SET_SETTINGS]),
     setLocale(lang)
     {
+      console.log('Lang ' + lang);
+      this.$store.commit(SET_SETTINGS, { defaultLanguage: lang });
       this.$root.$i18n.locale = lang;
-      this[SET_SETTINGS]({ defaultLanguage: lang });
+      //this[SET_SETTINGS]({ defaultLanguage: lang });
 
       import(
         /* webpackInclude: /(fr|de|en-GB)\.js$/ */
@@ -74,6 +77,7 @@ export default {
       {
         this.$q.lang.set(lang.default);
       });
+      // console.log("Settings "+JSON.stringify(this.$store.getters.GET_SETTINGS))
     }
   }
 };
