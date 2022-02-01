@@ -49,7 +49,7 @@ export default {
   created()
   {
     const $q = useQuasar();
-    let lang = $q.lang.getLocale().substr(0, 2).toLowerCase();
+    let lang =process.env.SERVER?'': $q.lang.getLocale().substr(0, 2).toLowerCase();
 
     if (this[GET_SETTINGS].defaultLanguage !== '')
     {
