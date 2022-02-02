@@ -1,27 +1,24 @@
-image: node:latest
-
 stages:
   - deploy
 
-pages:
+deploy_master:
   stage: deploy
   image: node:lts-slim
-  script:
-    - env | ( grep YAWIK_VUE_ROUTER_BASE || echo "ROUTER_BASE=/${CI_PAGES_URL#*://*/}/" ) | grep YAWIK_ | cut -d_ -f2,2,3 > .env
-    - env | ( grep YAWIK_ || echo -n "" ) | grep YAWIK_ALGOLIA | grep -v YAWIK_VUE_ROUTER_BASE | cut -d_ -f2,3 >> .env
-    - env | ( grep YAWIK_ || echo -n "" ) | grep YAWIK_ | grep -v YAWIK_VUE_ROUTER_BASE | grep -v YAWIK_ALGOLIA >> .env
-    - cat .env | grep BACKG
-    - yarn
-    - yarn build
-    - mkdir .public
-    - cp -r dist/spa/* .public
-    - cp dist/spa/index.html .public/404.html
-    - rm -Rf public
-    - mv .public public
-    - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
-  artifacts:
-    paths:
-      - public
+  environment:
+    name: staging/$CI_COMMIT_REF_NAME
+    url: https://yawik.org
   only:
-    - main
+   - main
+  before_script:
+    - apt -y update && apt -y upgrade && apt install -y rsync
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
+    - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/ssr/ nuxt@cross-solution.de:/srv/cross-solution/ssr/
+    - ssh nuxt@cross-solution.de sudo /bin/systemctl restart nodeserver-quasar.service
+  resource_group: production
+
 
