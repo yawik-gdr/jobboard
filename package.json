@@ -8,7 +8,7 @@
   "scripts": {
     "start": "cd dist/spa && quasar serve",
     "dev": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar dev",
-    "build": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar build",
+    "build": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar build -m spa",
     "lint": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src",
     "lintfix": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src --fix",
     "test:e2e": "cross-env E2E_TEST=true start-test \"quasar dev\" http-get://localhost:8080 \"cypress open\"",
@@ -23,7 +23,9 @@
     "core-js": "^3.6.5",
     "front-matter": "^4.0.2",
     "quasar": "^2.4.10",
+    "vue": "^3.0.0",
     "vue-i18n": "^9.0.0",
+    "vue-router": "^4.0.0",
     "vuex": "^4.0.1",
     "vuex-persistedstate": "^4.1.0"
   },
