@@ -22,7 +22,8 @@
             {
                 "icon": "img:../../yawik_logo-mobile.svg",
                 "label": "about-yawik",
-                "to": "/info/about-yawik"
+                "to": "/about-yawik",
+                "type": "info"
             },
             {
                 "icon": "auto_stories",
@@ -37,7 +38,8 @@
             {
                 "icon": "add",
                 "label": "create-jobs",
-                "to": "/info/stellenanzeige-erstellen"
+                "to": "/stellenanzeige-erstellen",
+                "type": "info"
             },
             {
                 "icon": "euro",

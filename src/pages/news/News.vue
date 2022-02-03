@@ -1,7 +1,8 @@
 <template>
   <q-page padding>
     <q-badge>{{ $t('Neuigkeiten von Yawik') }}</q-badge>
-    <q-badge>{{ category }}</q-badge>{{ new Date(date).toLocaleString($root.$i18n.locale) }}
+    <q-badge>{{ category }}</q-badge>
+    {{ new Date(date).toLocaleString($root.$i18n.locale) }}
     <q-markdown :src="markdown" toc @data="onToc" />
   </q-page>
 </template>
@@ -48,10 +49,12 @@ export default defineComponent({
     {
       title.value = val; // will automatically trigger a Meta update due to the binding
     }
+
     function pageKeywords(val)
     {
       keywords.value = val;
     }
+
     function pageDescription(val)
     {
       description.value = val;
@@ -72,10 +75,25 @@ export default defineComponent({
       toc: [],
     };
   },
+  watch:
+      {
+        '$i18n.locale': function(newVal, oldVal)
+        {
+          console.log('locale change', newVal);
+          this.$router.push({
+            name: 'news',
+            params: {
+              lang: newVal,
+              date: this.$route.params.date,
+              title: this.$route.params.title
+            }
+          });
+        }
+      },
   mounted()
   {
     //iconsole.log(this.$route.params);
-    const fileName = this.$route.params.date + '/' + this.$route.params.title;
+    const fileName = this.$route.params.lang + '/' + this.$route.params.date + '/' + this.$route.params.title;
     import('./' + fileName + '.md').then(m =>
     {
       const data = m.default;

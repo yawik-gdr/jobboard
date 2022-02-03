@@ -30,7 +30,7 @@
             :key="idx2"
             clickable
             :disable="val2.disable ? true : false"
-            :to="val2.to"
+            :to="(val2.type=='info')?'/info/'+$root.$i18n.locale+val2.to: val2.to"
           >
             <q-item-section avatar>
               <q-icon

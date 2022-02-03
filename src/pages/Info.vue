@@ -72,8 +72,20 @@ export default {
   watch: {
     '$route'(path)
     {
+      console.log('route watcher');
       const file = this.$route.path.split('/').pop();
       this.load(file);
+    },
+    '$i18n.locale': function(newVal, oldVal)
+    {
+      console.log('locale change', newVal);
+      this.$router.push({
+        name: 'info',
+        params: {
+          lang: newVal,
+          filename: this.$route.params.filename,
+        }
+      });
     }
   },
   mounted()
@@ -88,8 +100,10 @@ export default {
     load(file)
     {
       const fileName = file || this.$route.params.filename;
+      const lang = this.$route.params.lang;
       console.log('file', fileName);
-      import('./infos/' + fileName + '.md').then(m =>
+      console.log('lang', lang);
+      import('./infos/' + lang + '/' + fileName + '.md').then(m =>
       {
         const data = m.default;
         const content = frontMatter(data);
