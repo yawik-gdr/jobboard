@@ -18,6 +18,7 @@ deploy_master:
     - mkdir -p ~/.ssh
     - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
     - env | grep YAWIK_ > .env
+    - cat .env | grep BACK
     - yarn && NODE_ENV=production yarn build
     - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/spa/ yawik@cross-solution.de:/home/yawik/yawik.org/source/dist/spa/
     - ssh yawik@cross-solution.de pm2 reload yawik.org/source/ecosystem.config.js --env production -- --port 4000
