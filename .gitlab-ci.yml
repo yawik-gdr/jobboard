@@ -17,8 +17,8 @@ deploy_master:
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
     - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
-    - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/ssr/ nuxt@cross-solution.de:/srv/cross-solution/ssr/
-    - ssh nuxt@cross-solution.de sudo /bin/systemctl restart nodeserver-quasar.service
+    - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/ssr/ yawik@cross-solution.de:/srv/cross-solution/ssr/
+    - ssh yawik@cross-solution.de sudo /bin/systemctl restart nodeserver-quasar.service
   resource_group: production
 
 
