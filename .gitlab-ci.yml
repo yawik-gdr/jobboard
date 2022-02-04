@@ -19,7 +19,7 @@ deploy_master:
     - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
     - yarn && yarn build
     - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/spa/ yawik@cross-solution.de:/home/yawik/yawik.org/source/dist/spa/
-    - pm2 reload ecosystem.config.js --env production -- --port 4000
+    - ssh yawik@cross-solution.de pm2 reload ecosystem.config.js --env production -- --port 4000
   resource_group: production
 
 
