@@ -1,13 +1,17 @@
 ---
-title: Jobportal für alle(s)
-desc: Das Portal ist auch für die, die schon immer eine Stellenbörse haben wollten? Damit kann man sich viel Arbeit sparen und das Leben wird leichter.
-cat: Live Style
+title: A job portal for all and everything
+desc: The portal is also for those who have always wanted to have a job board? It can save you a lot of work and make your life easier.
+cat: Lifestyle
 date: 2022-01-22
 image: https://images.unsplash.com/photo-1536706936563-c9e47fc563df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Nnw0OTA5OTYzfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60
 ---
 
-# Ein Jobbportal für alle(s)
+# A job portal for all and everything
 
-Es gibt jetzt eine Jobportal für alle. Oder besser noch, für alles. Es ist nicht nur für Stellensuchende, wie man gemeinhin die Zielgruppe einer Jobbörse vermutet. Es ist auch nicht nur für die Arbeitgeber. Es ist für alles und jeden. Denn das Jobportal ist Open Source. Es ist also auch für all diejenigen, die sich schon immer gewünscht haben, auch mal ein Jobportal zu haben. Die sich berufen fühlen dafür zu sorgen, dass sich Menschen besser finden. 
+There is now a job portal for everyone. Or better yet, for everything. It's not just for job seekers, as one commonly assumes the target group of a job portal is. 
+It's not just for employers either. It is for everything and everyone. Because the job portal is open source. So it is also for all those who have always wanted to 
+have a job portal. Who feel called to make sure that people find each other better.
+
+Translated with www.DeepL.com/Translator (free version)
 
 
