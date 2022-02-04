@@ -17,9 +17,9 @@ deploy_master:
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
     - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
-    - yarn && yarn build -m spa
-    - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/ssr/ yawik@cross-solution.de:/srv/cross-solution/ssr/
-    - ssh yawik@cross-solution.de sudo /bin/systemctl restart nodeserver-quasar.service
+    - yarn && yarn build
+    - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/spa/ yawik@cross-solution.de:/home/yawik/yawik.org/source/dist/spa/
+    - pm2 reload ecosystem.config.js --env production -- --port 4000
   resource_group: production
 
 
