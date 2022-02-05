@@ -6,7 +6,7 @@
   "author": "Carsten Bleek <bleek@cross-solution.de>",
   "private": true,
   "scripts": {
-    "start": "cd dist/spa && quasar serve",
+    "start": "cd dist/spa && quasar serve --history",
     "dev": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar dev",
     "build": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar build -m spa",
     "lint": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src",
