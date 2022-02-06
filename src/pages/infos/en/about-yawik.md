@@ -1,9 +1,11 @@
 ---
-title: Über Yawik
+title: About Yawik
 desc: Woher kommt Yawik. Was kann man damit machen. Wozu ist es gut.
 components:
 - pages/infos/TestComponent
 ---
+
+# About Yawik
 
 Yawik provides several tools based on [Quasar](https://quasar.dev). The componte Framework allows us to develop much faster than [before](https:old.yawik.org). At the core
 

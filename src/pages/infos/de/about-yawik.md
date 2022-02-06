@@ -5,7 +5,7 @@ components:
 - pages/infos/TestComponent
 ---
 
-# De Über Yawik
+# Über Yawik
 
 Yawik stellt verschiedene Tools auf Basis von [Quasar](https://quasar.dev) zur Verfügung. Mit dem Komponten Framework können wir viel schneller entwickeln, als [früher](https:old.yawik.org). Im Kern bleibt aber alles bei der alten Idee. Ziel ist es das Personalwesen und Open Source zusammenbringen. Was bedeutet das?
 
