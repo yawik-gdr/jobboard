@@ -5,41 +5,41 @@ components:
 - pages/infos/TestComponent
 ---
 
-# En Über Yawik
+Yawik provides several tools based on [Quasar](https://quasar.dev). The componte Framework allows us to develop much faster than [before](https:old.yawik.org). At the core
 
-Yawik stellt verschiedene Tools auf Basis von [Quasar](https://quasar.dev) zur Verfügung. Mit dem Komponten Framework können wir viel schneller entwickeln, als [früher](https:old.yawik.org). Im Kern bleibt aber alles bei der alten Idee. Ziel ist es das Personalwesen und Open Source zusammenbringen. Was bedeutet das?
+Good software developers don't have a hard time finding a new job. The really good ones don't have to search job boards. Some don't want to, because a job ad doesn't correspond to what they are looking for.
 
-Gute Software Entwickler haben es nicht schwer einen neuen Job zu finden. Die richtig Guten müssen nicht in Stellenbörsen suchen. Manche wollen es auch nicht, weil eine Stellenanzeige nicht dem entspricht, was sie von einer Aufgabenstellung erwarten. Gute Software Entwickler können sich den Job aussuchen, der ihnen am besten gefällt. Kurz, sie müssen nicht suchen.
+It's not just job boards that have a hard time finding good developers.
 
-Nicht nur Jobbörsen haben es schwer gute Entwickler zu finden.
+Job boards spend a lot of time matching employers with job seekers. They get paid for their work. And their work is important. But there is a lot of room to improve efficiency.
 
-Jobbörsen investieren viel Zeit, um Arbeitgeber und Arbeitsuchende zusammenzuführen. Sie bekommen Geld für ihre Arbeit. Und ihre Arbeit ist wichtig. Aber es gibt viel Luft, um die Effizienz zu verbessen.
+And then there are the good developers around Quasar. The framework that gives the Yawik project the speed to develop the tools that HR needs.
 
-Und dann gibt es die guten Entwickler rund um Quasar. Dem Framework, was dem Yawik Projekt die notwendige Geschwindigkeit verleiht die Tools zu entwickeln, die das Personalwesen braucht.
+## Yawik functions
 
-## Yawik Funktionen
+- Currently you can publish job ads on Google Jobs for free with Yawik.
+- Run the whole job portal in their own design.
+- Build a career page for their company.
+- Use application forms for their ads.
+- Integrate job ads into your own homepage.
 
-- Aktuell kann man mit Yawik kostenlos Stellenazeigen auf Google Jobs veröffentlichen.
-- Das ganze Jobportal im eigenen Design betreiben.
-- Eine Karriereseite für ihr Unternehmen bauen.
-- Bewerbungsformulare für ihre Anzeigen nutzen.
-- Stellenanzeigen in eigene Homepage einbinden.
+## Job board
 
-## Stellenbörse (jobboard)
+The job board is for the job seeker.
 
-Die Stellenbörse ist für den Jobsuchenden.
+## Ad management (jobwizard)
 
-## Anzeigenmanagement (jobwizard)
+The ad management is for employers. It enables the entry, administration and publication of job advertisements.
 
-Das Anzeigenmanagement richtet sich an Arbeitgeber. Es ermöglicht damit die Eingabe, die Verwaltung und die Veröffentlichung von Stellenanzeigen.
+## Application Form
 
-## Bewerbungsformular (Application Form)
+There is an application form at https://form.yawik.org.
 
-es gibt ein Bewerbungsformular unter https://form.yawik.org
-
-Das Formular nutzt z.Z. für den Mailversand unser altes Yawik.
+The form currently uses our old Yawik for sending mails.
 
 
 ## Software Stack
 
-Yawik verwendet [Quasar](https://quasar.dev) für Frontend und [Strapi](https://strapi.io) für das Backend.
+Yawik uses [Quasar](https://quasar.dev) for the frontend and [Strapi](https://strapi.io) for the backend.
+
+Translated with www.DeepL.com/Translator (free version)

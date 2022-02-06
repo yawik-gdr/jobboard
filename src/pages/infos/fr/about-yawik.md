@@ -1,45 +1,47 @@
 ---
-title: Fr Über Yawik
+title: À propos de Yawik
 desc: Woher kommt Yawik. Was kann man damit machen. Wozu ist es gut.
 components:
 - pages/infos/TestComponent
 ---
 
-# Über Yawik
+# À propos de Yawik
 
-Yawik stellt verschiedene Tools auf Basis von [Quasar](https://quasar.dev) zur Verfügung. Mit dem Komponten Framework können wir viel schneller entwickeln, als [früher](https:old.yawik.org). Im Kern bleibt aber alles bei der alten Idee. Ziel ist es das Personalwesen und Open Source zusammenbringen. Was bedeutet das?
+Yawik met à disposition différents outils basés sur [Quasar](https://quasar.dev). Avec le framework de composants, nous pouvons développer beaucoup plus rapidement que [auparavant](https:old.yawik.org). Au fond, il reste
 
-Gute Software Entwickler haben es nicht schwer einen neuen Job zu finden. Die richtig Guten müssen nicht in Stellenbörsen suchen. Manche wollen es auch nicht, weil eine Stellenanzeige nicht dem entspricht, was sie von einer Aufgabenstellung erwarten. Gute Software Entwickler können sich den Job aussuchen, der ihnen am besten gefällt. Kurz, sie müssen nicht suchen.
+Les bons développeurs de logiciels n'ont pas de mal à trouver un nouvel emploi. Les bons ne doivent pas chercher dans les sites d'emploi. Certains ne veulent pas non plus le faire parce qu'une offre d'emploi ne correspond pas à leur profil.
 
-Nicht nur Jobbörsen haben es schwer gute Entwickler zu finden.
+Les sites d'emploi ne sont pas les seuls à avoir du mal à trouver de bons développeurs.
 
-Jobbörsen investieren viel Zeit, um Arbeitgeber und Arbeitsuchende zusammenzuführen. Sie bekommen Geld für ihre Arbeit. Und ihre Arbeit ist wichtig. Aber es gibt viel Luft, um die Effizienz zu verbessen.
+Les sites d'emploi investissent beaucoup de temps pour mettre en relation les employeurs et les demandeurs d'emploi. Ils sont payés pour leur travail. Et leur travail est important. Mais il y a beaucoup de marge pour améliorer l'efficacité.
 
-Und dann gibt es die guten Entwickler rund um Quasar. Dem Framework, was dem Yawik Projekt die notwendige Geschwindigkeit verleiht die Tools zu entwickeln, die das Personalwesen braucht.
+Et puis il y a les bons développeurs autour de Quasar. Le framework qui donne au projet Yawik la vitesse nécessaire pour développer les outils dont les ressources humaines ont besoin.
 
-## Yawik Funktionen
+## Fonctionnalités de Yawik
 
-- Aktuell kann man mit Yawik kostenlos Stellenazeigen auf Google Jobs veröffentlichen.
-- Das ganze Jobportal im eigenen Design betreiben.
-- Eine Karriereseite für ihr Unternehmen bauen.
-- Bewerbungsformulare für ihre Anzeigen nutzen.
-- Stellenanzeigen in eigene Homepage einbinden.
+- Actuellement, Yawik permet de publier gratuitement des annonces d'emploi sur Google Jobs.
+- Exploiter l'ensemble du portail d'emploi dans son propre design.
+- Construire un site de carrière pour son entreprise.
+- Utiliser des formulaires de candidature pour leurs annonces.
+- Intégrer les offres d'emploi dans sa propre page d'accueil.
 
-## Stellenbörse (jobboard)
+## Bourse d'emplois (jobboard)
 
-Die Stellenbörse ist für den Jobsuchenden.
+La bourse de l'emploi est destinée aux chercheurs d'emploi.
 
-## Anzeigenmanagement (jobwizard)
+## Gestion des annonces (jobwizard)
 
-Das Anzeigenmanagement richtet sich an Arbeitgeber. Es ermöglicht damit die Eingabe, die Verwaltung und die Veröffentlichung von Stellenanzeigen.
+La gestion des annonces s'adresse aux employeurs. Elle permet ainsi la saisie, la gestion et la publication d'offres d'emploi.
 
-## Bewerbungsformular (Application Form)
+## Formulaire de candidature (Application Form)
 
-es gibt ein Bewerbungsformular unter https://form.yawik.org
+il existe un formulaire de candidature sur https://form.yawik.org
 
-Das Formular nutzt z.Z. für den Mailversand unser altes Yawik.
+Ce formulaire utilise actuellement notre ancien Yawik pour l'envoi des mails.
 
 
-## Software Stack
+## Pile de logiciels
 
-Yawik verwendet [Quasar](https://quasar.dev) für Frontend und [Strapi](https://strapi.io) für das Backend.
+Yawik utilise [Quasar](https://quasar.dev) pour le front-end et [Strapi](https://strapi.io) pour le back-end.
+
+Traduit avec www.DeepL.com/Translator (version gratuite)
