@@ -6,9 +6,9 @@
   "author": "Carsten Bleek <bleek@cross-solution.de>",
   "private": true,
   "scripts": {
-    "start": "cd dist/spa && quasar serve --history",
+    "start": "cd dist/ssr && quasar serve --history",
     "dev": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar dev",
-    "build": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar build -m spa",
+    "build": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/@quasar/app/bin/quasar build -m ssr",
     "lint": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src",
     "lintfix": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src --fix",
     "test:e2e": "cross-env E2E_TEST=true start-test \"quasar dev\" http-get://localhost:8080 \"cypress open\"",
