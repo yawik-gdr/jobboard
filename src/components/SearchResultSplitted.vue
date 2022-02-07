@@ -33,7 +33,8 @@
 <script>
 import Date from 'src/components/Date.vue';
 import { defineComponent } from 'vue';
-
+//import { getWindow } from 'ssr-window';
+//const window=getWindow();
 export default defineComponent({
   name: 'SearchResultSplitted',
   components:
@@ -123,7 +124,10 @@ export default defineComponent({
         {
           const id = job.id;
           const title = this.convertToSlug(job.attributes.jobTitle);
-          window.history.pushState('', 'Title', '/jobs/' + id + '/' + title);
+          if (typeof window !== 'undefined')
+          {
+            window.history.pushState('', 'Title', '/jobs/' + id + '/' + title);
+          }
           this.selectedIndex = index;
           this.$emit('click', { job: job });
         }

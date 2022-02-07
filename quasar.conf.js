@@ -29,7 +29,7 @@ module.exports = configure(function(ctx)
     boot: [
       'i18n',
       'axios',
-      'gdpr',
+      { path: 'gdpr', server: false },
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -150,7 +150,8 @@ module.exports = configure(function(ctx)
       // Quasar plugins
       plugins: [
         'Meta',
-        'Notify'
+        'Notify',
+        'Cookies'
       ]
     },
 

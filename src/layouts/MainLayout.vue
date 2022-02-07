@@ -87,7 +87,7 @@ const metaData = {
   link: {
     material: {
       rel: 'canonical',
-      href: 'https://jobboard.yawik.org' + window.location.pathname
+      href: typeof window === 'undefined' ? '' : 'https://jobboard.yawik.org' + window.location.pathname
     }
   },
   noscript: {
@@ -120,43 +120,43 @@ export default defineComponent({
     };
   },
   computed:
-  {
-    essentialLinks()
-    {
-      const linksList = [
+      {
+        essentialLinks()
+        {
+          const linksList = [
 
-        {
-          title: this.$t('form_title'),
-          caption: this.$t('form_caption'),
-          icon: 'feed',
-          link: 'https://form.yawik.org'
+            {
+              title: this.$t('form_title'),
+              caption: this.$t('form_caption'),
+              icon: 'feed',
+              link: 'https://form.yawik.org'
+            },
+            {
+              title: this.$t('jobs_title'),
+              caption: this.$t('jobs_caption'),
+              icon: 'view_list',
+              link: 'https://jobwizard.yawik.org'
+            },
+            {
+              title: this.$t('docs'),
+              caption: 'yawik',
+              icon: 'auto_stories',
+              link: 'https://jobwizard.yawik.org/docs'
+            },
+            {
+              title: this.$t('src_title'),
+              caption: this.$t('src_caption'),
+              icon: 'code',
+              link: 'https://gitlab.com/yawik/jobboard'
+            },
+          ];
+          return linksList;
         },
+        background()
         {
-          title: this.$t('jobs_title'),
-          caption: this.$t('jobs_caption'),
-          icon: 'view_list',
-          link: 'https://jobwizard.yawik.org'
-        },
-        {
-          title: this.$t('docs'),
-          caption: 'yawik',
-          icon: 'auto_stories',
-          link: 'https://jobwizard.yawik.org/docs'
-        },
-        {
-          title: this.$t('src_title'),
-          caption: this.$t('src_caption'),
-          icon: 'code',
-          link: 'https://gitlab.com/yawik/jobboard'
-        },
-      ];
-      return linksList;
-    },
-    background()
-    {
-      return process.env.YAWIK_BACKGROUND;
-    }
-  },
+          return process.env.YAWIK_BACKGROUND;
+        }
+      },
   mounted()
   {
     const illustrations = require.context(
@@ -185,72 +185,72 @@ export default defineComponent({
 
 <style lang="scss">
 
-.claim
-{
-  font-size: 3em;
-  margin-bottom: 1em;
-}
+  .claim
+  {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
 
 </style>
 
 <i18n>
-{
+  {
   "en": {
-    "jobboard": "Job portal",
-    "applicants": "Applicants",
-    "search": "find jobs",
-    "what": "what are you looking for?",
-    "where": "where do you search?",
-    "jobs": "Jobs",
-    "create-job": "Create Job",
-    "infos-for-applicant": "Candidate information",
-    "jobs_title": "Ad management",
-    "jobs_caption": "Create, manage and publish jobs",
-    "form_title": "Application forms",
-    "form_caption": "Structured applications by mail",
-    "docs": "Documentation",
-    "src_title": "Open Source",
-    "src_caption": "Sources located at Gitlab",
-    "sightly-different-jobboard": "a slightly different job board ...",
-    "differently_because": "differently, because it's 100% open source."
+  "jobboard": "Job portal",
+  "applicants": "Applicants",
+  "search": "find jobs",
+  "what": "what are you looking for?",
+  "where": "where do you search?",
+  "jobs": "Jobs",
+  "create-job": "Create Job",
+  "infos-for-applicant": "Candidate information",
+  "jobs_title": "Ad management",
+  "jobs_caption": "Create, manage and publish jobs",
+  "form_title": "Application forms",
+  "form_caption": "Structured applications by mail",
+  "docs": "Documentation",
+  "src_title": "Open Source",
+  "src_caption": "Sources located at Gitlab",
+  "sightly-different-jobboard": "a slightly different job board ...",
+  "differently_because": "differently, because it's 100% open source."
   },
   "de": {
-    "jobboard": "Stellenbörse",
-    "applicants": "Bewerber",
-    "search": "Jobs finden",
-    "what": "was suchen sie?",
-    "where": "wo suchen sie?",
-    "create-job": "Stellenanzeige erstellen",
-    "jobs": "Stellenanzeigen",
-    "infos-for-applicant": "Bewerberinformatinen",
-    "jobs_title": "Anzeigenverwaltung",
-    "jobs_caption": "Stellenanzeigen anlegen, verwalten und veröffentlichen",
-    "form_title": "Bewerbungsformulare",
-    "form_caption": "Bewerbungen strukturiert per Mail",
-    "docs": "Dokumentation",
-    "src_title": "Open Source",
-    "src_caption": "Quellen auf Gitlab",
-    "sightly-different-jobboard": "eine etwas andere Stellenbörse ...",
-    "differently_because": "anders, weil es 100% open source ist."
+  "jobboard": "Stellenbörse",
+  "applicants": "Bewerber",
+  "search": "Jobs finden",
+  "what": "was suchen sie?",
+  "where": "wo suchen sie?",
+  "create-job": "Stellenanzeige erstellen",
+  "jobs": "Stellenanzeigen",
+  "infos-for-applicant": "Bewerberinformatinen",
+  "jobs_title": "Anzeigenverwaltung",
+  "jobs_caption": "Stellenanzeigen anlegen, verwalten und veröffentlichen",
+  "form_title": "Bewerbungsformulare",
+  "form_caption": "Bewerbungen strukturiert per Mail",
+  "docs": "Dokumentation",
+  "src_title": "Open Source",
+  "src_caption": "Quellen auf Gitlab",
+  "sightly-different-jobboard": "eine etwas andere Stellenbörse ...",
+  "differently_because": "anders, weil es 100% open source ist."
   },
   "fr": {
-    "jobboard": "Bourse d'emploi",
-    "applicants": "Candidates",
-    "search": "Trouver des jobs",
-    "what": "que cherchez-vous ?",
-    "where": "où cherchez-vous ?",
-    "create-job": "Créer une offre d'emploi",
-    "jobs": "Offres d'emploi",
-    "infos-for-applicant": "Informations sur le candidat",
-    "jobs_title": "Gestion des annonces",
-    "jobs_caption": "Créer, gérer et publier des offres d'emploi",
-    "form_title": "Formulaires de candidature",
-    "form_caption": "Candidatures structurées par e-mail",
-    "docs": "Documentation",
-    "src_title": "Open Source",
-    "src_caption": "Les sources sur Gitlab",
-    "sightly-different-jobboard": "une bourse de l'emploi un peu différente ...",
-    "differently_because": "différent, car il est 100% open source."
+  "jobboard": "Bourse d'emploi",
+  "applicants": "Candidates",
+  "search": "Trouver des jobs",
+  "what": "que cherchez-vous ?",
+  "where": "où cherchez-vous ?",
+  "create-job": "Créer une offre d'emploi",
+  "jobs": "Offres d'emploi",
+  "infos-for-applicant": "Informations sur le candidat",
+  "jobs_title": "Gestion des annonces",
+  "jobs_caption": "Créer, gérer et publier des offres d'emploi",
+  "form_title": "Formulaires de candidature",
+  "form_caption": "Candidatures structurées par e-mail",
+  "docs": "Documentation",
+  "src_title": "Open Source",
+  "src_caption": "Les sources sur Gitlab",
+  "sightly-different-jobboard": "une bourse de l'emploi un peu différente ...",
+  "differently_because": "différent, car il est 100% open source."
   }
-}
+  }
 </i18n>

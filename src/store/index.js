@@ -1,11 +1,11 @@
 import { store } from 'quasar/wrappers';
 import { createStore } from 'vuex';
-import createPersistedState from 'vuex-persistedstate';
+//import createPersistedState from 'vuex-persistedstate';
 import yawik from './yawik';
 
 export default store(function(/* { ssrContext } */)
 {
-  const Store = createStore({
+  /* const Store = createStore({
     modules: {
       yawik
     },
@@ -31,7 +31,13 @@ export default store(function(/* { ssrContext } */)
       const newData = require('./yawik').default;
       Store.hotUpdate({ modules: { yawik: newData } });
     });
-  }
+  }*/
+  const Store = createStore({
+    modules: {
+      yawik
+    },
+  });
+
   return Store;
 });
 
