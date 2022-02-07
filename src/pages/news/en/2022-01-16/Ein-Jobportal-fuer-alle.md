@@ -1,5 +1,5 @@
 ---
-title: Ein Jobportal for alle
+title: English Ein Jobportal for alle
 desc: Ein Portal für Arbeitnehmer und Arbeitgeber, ist klar. Aber eins für Software Entwickler? Damit kann man sich viel Arbeit sparen und das Leben wird leichter.
 cat: In eigener Sache
 date: 2022-01-16

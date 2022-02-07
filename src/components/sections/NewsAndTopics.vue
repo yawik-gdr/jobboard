@@ -16,7 +16,7 @@
           <q-card-actions>
             <q-badge color="secondary">{{ val.cat }}</q-badge>
             <q-space />
-            <q-btn flat>{{ new Date(val.date).toLocaleString($root.$i18n.locale) }}</q-btn>
+            <date :date="val.date" />
           </q-card-actions>
         </q-card>
       </span>
@@ -28,53 +28,90 @@
 import frontMatter from 'front-matter';
 
 import { defineComponent } from 'vue';
-
+import Date from 'src/components/Date.vue';
 export default defineComponent({
   name: 'NewsAndTopics',
+  components:
+      {
+        Date
+      },
   data()
   {
     return {
-      metas: []
+      metas: [],
+      lang: null
     };
   },
-  computed:
-      {
-
-      },
   watch: {
     files()
     {
+    },
+    '$i18n.locale': function(newVal, oldVal)
+    {
+      console.log('locale change', newVal);
+      this.lang = newVal;
+      this.getNewsAndTopics(newVal);
     }
   },
   mounted()
   {
-    const illustrations = require.context(
-      '../../pages/news',
-      true, // subdirectories
-      //      /((.*\.(md\.*))[^.]*$)/
-      /^.*\.md$/
-    );
-
-    const arr = illustrations.keys();
-    const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
-
-    records.forEach(fileName =>
-    {
-      const data = illustrations(fileName).default;
-      const content = frontMatter(data);
-      const attributes = content.attributes;
-      attributes.filename = this.getDateFromFileName(fileName);
-      this.metas.push(content.attributes);
-    });
+    this.lang = this.$root.$i18n.locale;
+    this.getNewsAndTopics(this.lang);
   },
   methods:
       {
+        getNewsAndTopics(lang = 'en')
+        {
+          console.log('language ' + lang);
+          this.metas = [];
+          let illustrations;
+          if (lang === 'en')
+          {
+            illustrations = require.context(
+              '../../pages/news/en',
+              true, // subdirectories
+              //      /((.*\.(md\.*))[^.]*$)/
+              /^.*\.md$/
+            );
+          }
+          else if (lang === 'de')
+          {
+            illustrations = require.context(
+              '../../pages/news/de',
+              true, // subdirectories
+              //      /((.*\.(md\.*))[^.]*$)/
+              /^.*\.md$/
+            );
+          }
+          else if (lang === 'fr')
+          {
+            illustrations = require.context(
+              '../../pages/news/fr',
+              true, // subdirectories
+              //      /((.*\.(md\.*))[^.]*$)/
+              /^.*\.md$/
+            );
+          }
+
+          const arr = illustrations.keys();
+          const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
+
+          records.forEach(fileName =>
+          {
+            const data = illustrations(fileName).default;
+            const content = frontMatter(data);
+            const attributes = content.attributes;
+            attributes.filename = this.getDateFromFileName(fileName);
+            this.metas.push(content.attributes);
+          });
+        },
         route(filename)
         {
           const matches = filename.match(/(.*)\/(.*)/);
           this.$router.push({
             name: 'news',
             params: {
+              lang: this.lang,
               date: matches[1],
               title: matches[2]
             }
@@ -96,16 +133,16 @@ export default defineComponent({
 </script>
 
 <i18n>
-{
+  {
   "en":
   {
-    "news-and-topics": "News & Topics",
-    "day_ago": "days ago"
+  "news-and-topics": "News & Topics",
+  "day_ago": "days ago"
   },
   "de":
   {
-    "news-and-topics": "Aktuelles & Themen",
-    "days_ago": "vor Tagen"
+  "news-and-topics": "Aktuelles & Themen",
+  "days_ago": "vor Tagen"
   }
-}
+  }
 </i18n>

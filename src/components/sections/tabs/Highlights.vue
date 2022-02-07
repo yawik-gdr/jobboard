@@ -16,11 +16,7 @@
                   <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px"
                          width="100px"
                   />
-                  <q-item-label align="left"
-                                caption
-                  >
-                    {{ diff(today,val.attributes.createdAt) }} {{ $t('days') }}
-                  </q-item-label>
+                  <my-date :date="val.attributes.publishedAt" />
                 </q-item-section>
                 <q-item-section>
                   <q-item-label align="left">
@@ -44,7 +40,7 @@
               >
                 <q-item-section avatar>
                   <q-img fit="contain" :src="val.organizationLogo" width="100px" height="50px" />
-                  <q-item-label align="left" caption>{{ diff(today,new Date(val.dateStart)) }} {{ $t('days') }}</q-item-label>
+                  <my-date :date="val.dateStart" />
                 </q-item-section>
 
                 <q-item-section>
@@ -67,12 +63,15 @@
 
 <script>
 
-import { date } from 'quasar';
-// destructuring to keep only what is needed
-const { getDateDiff } = date;
+import MyDate from 'src/components/Date.vue';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'Highlights',
+  components:
+  {
+    MyDate
+  },
   data()
   {
     return {
@@ -91,7 +90,6 @@ export default {
         rowsNumber: 10
       },
       data: [],
-      today: new Date(),
       rows: [],
       jobsUrl: `${process.env.YAWIK_API_URL}/api/jobs`,
     };
@@ -106,10 +104,6 @@ export default {
         {
           return process.env.YAWIK_JOB_URL;
         },
-        diff()
-        {
-          return getDateDiff;
-        }
       },
   mounted()
   {
@@ -249,7 +243,7 @@ export default {
       };
     },
   }
-};
+});
 </script>
 
 <style lang="scss">
@@ -274,16 +268,18 @@ export default {
 </style>
 
 <i18n>
-  {
+{
   "en": {
-  "search-placeholder": "Job title, Company or Location",
-  "first-ad": "Place your first ad! Free of charge.",
-  "days": "days",
+    "search-placeholder": "Job title, Company or Location",
+    "first-ad": "Place your first ad! Free of charge.",
   },
   "de": {
-  "search-placeholder": "Anzeigentitel, Firma oder Ort",
-  "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
-  "days": "Tage"
-  }
-  }
+    "search-placeholder": "Anzeigentitel, Firma oder Ort",
+    "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
+  },
+  "fr": {
+    "search-placeholder": "Anzeigentitel, Firma oder Ort",
+    "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
+  },
+}
 </i18n>

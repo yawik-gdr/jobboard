@@ -27,7 +27,7 @@ Und dann gibt es die guten Entwickler rund um Quasar. Dem Framework, was dem Yaw
 
 ## Stellenbörse (jobboard)
 
-Die Stellenbörse ist für den Jobsuchenden. 
+Die Stellenbörse ist für den Jobsuchenden.
 
 ## Anzeigenmanagement (jobwizard)
 
