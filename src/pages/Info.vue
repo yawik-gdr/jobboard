@@ -54,11 +54,61 @@
 <script>
 import { QMarkdown } from '@quasar/quasar-ui-qmarkdown';
 import frontMatter from 'front-matter';
+import { useMeta } from 'quasar';
+import { defineComponent, ref } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'Info',
   components: {
     QMarkdown
+  },
+    setup()
+  {
+    const title = ref('yawik jobboard');
+    const description = ref('yawik jobboard');
+    const keywords = ref('yawik jobboard');
+
+    // NOTICE the parameter here is a function
+    // Under the hood, it is converted to a Vue computed prop for reactivity
+    useMeta(() =>
+    {
+      return {
+        // whenever "title" from above changes, your meta will automatically update
+        title: title.value,
+        titleTemplate: title => `${title} - Yawik News`,
+        meta: {
+          description: {
+            name: 'description',
+            content: description.value
+          },
+          keywords: {
+            name: 'keywords',
+            content: keywords.value
+          },
+        }
+      };
+    });
+
+    function pageTitle(val)
+    {
+      title.value = val; // will automatically trigger a Meta update due to the binding
+    }
+
+    function pageKeywords(val)
+    {
+      keywords.value = val;
+    }
+
+    function pageDescription(val)
+    {
+      description.value = val;
+    }
+
+    return {
+      pageTitle,
+      pageDescription,
+      pageKeywords
+    };
   },
   data()
   {
@@ -92,7 +142,23 @@ export default {
   {
     this.load();
   },
-  methods: {
+  watch:
+  {
+    '$i18n.locale': function(newVal, oldVal)
+    {
+      console.log('locale change', newVal);
+      this.$router.push({
+        name: 'news',
+        params: {
+          lang: newVal,
+          date: this.$route.params.date,
+          title: this.$route.params.title
+        }
+      });
+    }
+  },
+  methods: 
+  {
     onToc(toc)
     {
       this.toc = toc;
@@ -108,11 +174,14 @@ export default {
         const data = m.default;
         const content = frontMatter(data);
         const attributes = content.attributes;
+        this.pageDescription(attributes.desc);
+        this.pageTitle(attributes.title);
+        this.pageKeywords(attributes.keywords);
         this.markdown = content.body;
         this.category = attributes.cat;
         this.date = attributes.date;
       });
     }
   }
-};
+});
 </script>

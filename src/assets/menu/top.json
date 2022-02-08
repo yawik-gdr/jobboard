@@ -44,7 +44,9 @@
             {
                 "icon": "euro",
                 "label": "prices",
-                "to": "/info/prices"
+                "to": "/prices",
+                "type": "info"
+
             }
         ]
     }

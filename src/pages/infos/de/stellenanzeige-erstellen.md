@@ -1,6 +1,6 @@
 ---
 title: kostenlos Stellenanzeigen erstellen, verwalten und veröffentlichen.
-desc: Anzeigen schalten
+desc: Hier können Sie eine Stellenanzeige eingeben und auf Google Jobs veröffentlichen. Außerdem kann die Anzeige in die eingene Homepage eingebunden werden. Kostenlos!
 components:
 - pages/infos/TestComponent
 ---
@@ -12,8 +12,6 @@ components:
 sofort weiter zum [Eingabeformular](https://jobwizard.yawik.org)
 
 ## Best Practice
-
-
 
 sie können hier kostenlos Stellenanzeigen erstellen, verwalten und veröffentlichen. Ihre eingegebenen Daten werden von uns vor Veröffentlichung geprüft und freigegeben. Der Freigabeschritt entfällt nach einer gewissen Reputation.
 
