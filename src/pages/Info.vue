@@ -62,7 +62,7 @@ export default defineComponent({
   components: {
     QMarkdown
   },
-    setup()
+  setup()
   {
     const title = ref('yawik jobboard');
     const description = ref('yawik jobboard');
@@ -142,22 +142,7 @@ export default defineComponent({
   {
     this.load();
   },
-  watch:
-  {
-    '$i18n.locale': function(newVal, oldVal)
-    {
-      console.log('locale change', newVal);
-      this.$router.push({
-        name: 'news',
-        params: {
-          lang: newVal,
-          date: this.$route.params.date,
-          title: this.$route.params.title
-        }
-      });
-    }
-  },
-  methods: 
+  methods:
   {
     onToc(toc)
     {

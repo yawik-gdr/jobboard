@@ -56,6 +56,7 @@ export default defineComponent({
   mounted()
   {
     this.lang = this.$root.$i18n.locale;
+    console.log('This Language NewsAndTopics L59: ' + this.lang);
     this.getNewsAndTopics(this.lang);
   },
   methods:

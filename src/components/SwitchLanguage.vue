@@ -1,11 +1,13 @@
 <template>
   <q-btn-dropdown no-caps color="primary">
     <template #label>
-      <img
-        :src="'flags/' + $root.$i18n.locale + '.svg'" width="28"
-        :alt="$root.$i18n.locale.substr(0, 2).toUpperCase()"
-        class="q-mr-md"
-      >
+      <q-no-ssr>
+        <img
+          :src="'flags/' + $root.$i18n.locale + '.svg'" width="28"
+          :alt="$root.$i18n.locale.substr(0, 2).toUpperCase()"
+          class="q-mr-md"
+        >
+      </q-no-ssr>
       {{ $q.platform.is.mobile ? '' : $t('localeName') }}
     </template>
 
@@ -38,19 +40,18 @@ import { useQuasar } from 'quasar';
 export default {
   name: 'SwitchLanguage',
   computed:
-  {
-    ...mapGetters([GET_SETTINGS]),
-    defaultLanguage()
-    {
-      console.log('Settings ' + this[GET_SETTINGS]);
-      return this[GET_SETTINGS].defaultLanguage;
-    }
-  },
+      {
+        ...mapGetters([GET_SETTINGS]),
+        defaultLanguage()
+        {
+          console.log('Settings ' + this[GET_SETTINGS]);
+          return this[GET_SETTINGS].defaultLanguage;
+        }
+      },
   created()
   {
     const $q = useQuasar();
     let lang = process.env.SERVER ? '' : $q.lang.getLocale().substr(0, 2).toLowerCase();
-
     if (this[GET_SETTINGS].defaultLanguage !== '')
     {
       lang = this[GET_SETTINGS].defaultLanguage;
@@ -60,25 +61,23 @@ export default {
       : this.$root.$i18n.fallbackLocale;
   },
   methods:
-  {
-    // ...mapMutations([SET_SETTINGS]),
-    // ...mapActions([SET_SETTINGS]),
-    setLocale(lang)
-    {
-      console.log('Lang ' + lang);
-      this.$store.commit(SET_SETTINGS, { defaultLanguage: lang });
-      this.$root.$i18n.locale = lang;
-      //this[SET_SETTINGS]({ defaultLanguage: lang });
-
-      import(
-        /* webpackInclude: /(fr|de|en-GB)\.js$/ */
-        'quasar/lang/' + (lang === 'en' ? 'en-GB' : lang)
-      ).then(lang =>
       {
-        this.$q.lang.set(lang.default);
-      });
-      // console.log("Settings "+JSON.stringify(this.$store.getters.GET_SETTINGS))
-    }
-  }
+        setLocale(lang)
+        {
+          console.log('Lang ' + lang);
+          this.$store.commit(SET_SETTINGS, { defaultLanguage: lang });
+          this.$root.$i18n.locale = lang;
+          //this[SET_SETTINGS]({ defaultLanguage: lang });
+
+          import(
+            /* webpackInclude: /(fr|de|en-GB)\.js$/ */
+            'quasar/lang/' + (lang === 'en' ? 'en-GB' : lang)
+          ).then(lang =>
+          {
+            this.$q.lang.set(lang.default);
+          });
+          // console.log("Settings "+JSON.stringify(this.$store.getters.GET_SETTINGS))
+        }
+      }
 };
 </script>
