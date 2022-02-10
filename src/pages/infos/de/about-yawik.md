@@ -31,7 +31,7 @@ Das Anzeigenmanagement richtet sich an Arbeitgeber. Es ermöglicht damit die Ein
 
 ## Bewerbungsformular (Application Form)
 
-es gibt ein Bewerbungsformular unter https://form.yawik.org
+Es gibt ein Bewerbungsformular unter https://form.yawik.org
 
 Das Formular nutzt z.Z. für den Mailversand unser altes Yawik.
 
