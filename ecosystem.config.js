@@ -17,7 +17,7 @@ apps : [{
       repo : 'https://gitlab.com/yawik/jobboard',
       path : '/home/yawik/yawik.org',
       'pre-deploy-local': 'rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/ssr/ yawik@cross-solution.de:/home/yawik/yawik.org/source/dist/ssr/',
-      'post-deploy' : 'pwd && ls -l && pm2 reload ecosystem.config.js --env production -- --port 4000',
+      'post-deploy' : 'pm2 reload ecosystem.config.js --env production -- --port 4000',
       'pre-setup': 'pm2 ps'
     }
   }
