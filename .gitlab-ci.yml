@@ -3,22 +3,18 @@ stages:
 
 deploy_master:
   stage: deploy
-  image: node:lts-slim
+  image: registry.gitlab.com/yawik/docker/yarn-git-ssh-rsync:main
   environment:
     name: staging/$CI_COMMIT_REF_NAME
     url: https://yawik.org
   only:
-   - main
-  before_script:
-    - apt -y update && apt -y upgrade && apt install -y rsync
+    - main
   script:
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
     - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
     - env | grep YAWIK_ > .env
-    - cat .env | grep BACK
     - yarn && NODE_ENV=production yarn build
     - rsync -ra --exclude=node_modules --exclude=frankfurt-im-nebel.jpg --delete dist/ssr/ yawik@cross-solution.de:/home/yawik/yawik.org/source/dist/ssr/
     - ssh yawik@cross-solution.de pm2 reload yawik.org/source/ecosystem.config.js --env production -- --port 4000
