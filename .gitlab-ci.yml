@@ -16,6 +16,8 @@ deploy_master:
     - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
     - env | grep YAWIK_ > .env
     - yarn && NODE_ENV=production yarn build
+    - git config --global user.name "yawik-bot"
+    - git config --global user.email "yawik-bot@yawik.org"
     - git stash
     - pm2 deploy production
   resource_group: production
