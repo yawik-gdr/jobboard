@@ -30,7 +30,6 @@ register(process.env.SERVICE_WORKER_FILE, {
   },
 
   updated (/* registration */) {
-    // console.log('New content is available; please refresh.')
     Notify.create({
       color: 'negative',
       icon: mdiCached,  
@@ -56,7 +55,21 @@ register(process.env.SERVICE_WORKER_FILE, {
   },
 
   offline () {
-    // console.log('No internet connection found. App is running in offline mode.')
+    Notify.create({
+      color: 'info',
+      icon: mdiCached,  
+      message: 'No internet connection found. App is running in offline mode.',
+      timeout: 0,
+      multiLine: true,
+      position: 'top',
+      actions: [
+        {  
+          label: 'OK',
+          color: 'white',  
+          handler: () => {}
+        }
+      ]  
+    }) 
   },
 
   error (/* err */) {
