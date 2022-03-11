@@ -1,21 +1,22 @@
 ---
-title: About Yawik
+title: About us
 desc: Woher kommt Yawik. Was kann man damit machen. Wozu ist es gut.
 components:
 - pages/infos/TestComponent
 ---
 
-# About Yawik
+# About us
+What is the Yawik Jobboard? And what is Yawik, the software we use? In addition, on this page we introduce the people behind the 
+Yawik Jobboard. 
 
-Yawik provides several tools based on [Quasar](https://quasar.dev). The componte Framework allows us to develop much faster than [before](https:old.yawik.org). At the core
+## About Yawik Jobboard
+The Yawik Jobboard is a job board, but a special one. As with other portals, job ads can be created and vacancies can be searched for. Those looking for a new job can limit the selection to certain regions or industries. Open positions at large companies can also be searched for specifically. 
+Nevertheless, there are some important differences to commercial competitors. The job advertisement on the Yawik Jobboard is free of charge. It can be easily and conveniently entered via a form and - if desired - then almost as easily integrated on one's own website. Another special feature: the Yawik Jobboard is based on the free software Yawik
 
-Good software developers don't have a hard time finding a new job. The really good ones don't have to search job boards. Some don't want to, because a job ad doesn't correspond to what they are looking for.
-
-It's not just job boards that have a hard time finding good developers.
-
-Job boards spend a lot of time matching employers with job seekers. They get paid for their work. And their work is important. But there is a lot of room to improve efficiency.
-
-And then there are the good developers around Quasar. The framework that gives the Yawik project the speed to develop the tools that HR needs.
+## About Yawik
+Yawik is to HR software what WordPress is to editorial systems: a free and flexible open source solution. It is not only the basis for the Yawik job portal, but can also be used for a company's own job board or career pages. Because of its open source character, the software can be easily adapted to your own needs. 
+It is important to note that Yawik can easily be adapted to a company's design. The software offers a job advertisement and applicant management system (ATS), a CV database and a job portal. However, all components are modular, not all building blocks have to be used for every application. And because of its open source character, further components can also be developed and added. 
+Job advertisements can also be published with Yawik via Google Jobs.
 
 ## Yawik functions
 
