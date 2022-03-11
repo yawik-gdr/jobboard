@@ -57,25 +57,12 @@ register(process.env.SERVICE_WORKER_FILE, {
     })  
   },
 
-  offline () {
-    Notify.create({
-      color: 'info',
-      icon: mdiCached,  
-      message: 'No internet connection found. App is running in offline mode.',
-      timeout: 0,
-      multiLine: true,
-      position: 'top',
-      actions: [
-        {  
-          label: 'OK',
-          color: 'white',  
-          handler: () => {}
-        }
-      ]  
-    }) 
+  offline()
+  {
+    // console.log('No internet connection found. App is running in offline mode.')
   },
 
-  error (/* err */) {
-    // console.error('Error during service worker registration:', err)
+  error (err ) {
+    console.error('Error during service worker registration:', err)
   }
 })

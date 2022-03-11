@@ -191,15 +191,8 @@ module.exports = configure(function(ctx)
     pwa: {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {
-        cleanupOutdatedCaches: true,
         skipWaiting: true,
-        clientsClaim: true,
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/cdn/,
-            handler: 'StaleWhileRevalidate'
-          }
-        ]
+        clientsClaim: true
       }, // only for GenerateSW
 
       // for the custom service worker ONLY (/src-pwa/custom-service-worker.[js|ts])

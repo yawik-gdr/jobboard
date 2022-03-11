@@ -13,8 +13,31 @@ const routes = [
         component: () => import('pages/Jobs.vue'),
       },
       {
+        path: 'jobs/:q',
+        name: 'search-jobs',
+        component: () => import('pages/Jobs.vue'),
+      },
+      {
         path: 'jobs/:id/:title',
         name: 'selected-job',
+        props: true,
+        component: () => import('pages/Jobs.vue'),
+      },
+      {
+        path: 'jobs-in/:region',
+        name: 'jobs-in',
+        props: true,
+        component: () => import('pages/Jobs.vue'),
+      },
+      {
+        path: 'jobs-by/:company',
+        name: 'jobs-by',
+        props: true,
+        component: () => import('pages/Jobs.vue'),
+      },
+      {
+        path: 'jobs-near-by/:q/:location/:coordinates/:distance',
+        name: 'jobs-near-by',
         props: true,
         component: () => import('pages/Jobs.vue'),
       },

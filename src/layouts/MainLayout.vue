@@ -2,20 +2,6 @@
   <q-layout view="lHh Lpr lFf">
     <q-header reveal elevated>
       <toolbar @toggle-drawer="toggleLeftDrawer" />
-      <q-carousel v-if="$route.path === '/'" v-model="slide" class="full-width" animated height="50vh">
-        <q-carousel-slide
-          name="first"
-          :img-src="background"
-          class="text-white"
-        >
-          <div class="absolute-center full-width">
-            <div class="claim text-center">{{ $t('sightly-different-jobboard') }}</div>
-            <div class="full-width justify-center">
-              <searchform />
-            </div>
-          </div>
-        </q-carousel-slide>
-      </q-carousel>
     </q-header>
 
     <q-footer bordered class="bg-white text-primary">
@@ -68,7 +54,6 @@ import EssentialLink from 'components/EssentialLink.vue';
 import Toolbar from 'components/Toolbar.vue';
 import { useMeta } from 'quasar';
 import { defineComponent, ref } from 'vue';
-import searchform from 'src/components/SearchForm.vue';
 import frontMatter from 'front-matter';
 
 const metaData = {
@@ -100,7 +85,6 @@ export default defineComponent({
 
   components: {
     EssentialLink,
-    searchform,
     Toolbar
   },
 
@@ -110,7 +94,6 @@ export default defineComponent({
     const leftDrawerOpen = ref(false);
 
     return {
-      slide: 'first',
       metas: [],
       leftDrawerOpen,
       toggleLeftDrawer()
@@ -120,43 +103,39 @@ export default defineComponent({
     };
   },
   computed:
-      {
-        essentialLinks()
-        {
-          const linksList = [
+  {
+    essentialLinks()
+    {
+      const linksList = [
 
-            {
-              title: this.$t('form_title'),
-              caption: this.$t('form_caption'),
-              icon: 'feed',
-              link: 'https://form.yawik.org'
-            },
-            {
-              title: this.$t('jobs_title'),
-              caption: this.$t('jobs_caption'),
-              icon: 'view_list',
-              link: 'https://jobwizard.yawik.org'
-            },
-            {
-              title: this.$t('docs'),
-              caption: 'yawik',
-              icon: 'auto_stories',
-              link: 'https://jobwizard.yawik.org/docs'
-            },
-            {
-              title: this.$t('src_title'),
-              caption: this.$t('src_caption'),
-              icon: 'code',
-              link: 'https://gitlab.com/yawik/jobboard'
-            },
-          ];
-          return linksList;
-        },
-        background()
         {
-          return process.env.YAWIK_BACKGROUND;
-        }
-      },
+          title: this.$t('form_title'),
+          caption: this.$t('form_caption'),
+          icon: 'feed',
+          link: 'https://form.yawik.org'
+        },
+        {
+          title: this.$t('jobs_title'),
+          caption: this.$t('jobs_caption'),
+          icon: 'view_list',
+          link: 'https://jobwizard.yawik.org'
+        },
+        {
+          title: this.$t('docs'),
+          caption: 'yawik',
+          icon: 'auto_stories',
+          link: 'https://jobwizard.yawik.org/docs'
+        },
+        {
+          title: this.$t('src_title'),
+          caption: this.$t('src_caption'),
+          icon: 'code',
+          link: 'https://gitlab.com/yawik/jobboard'
+        },
+      ];
+      return linksList;
+    },
+  },
   mounted()
   {
     const illustrations = require.context(
@@ -182,16 +161,6 @@ export default defineComponent({
 });
 
 </script>
-
-<style lang="scss">
-
-  .claim
-  {
-    font-size: 3em;
-    margin-bottom: 1em;
-  }
-
-</style>
 
 <i18n>
   {

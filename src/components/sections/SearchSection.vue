@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <q-card>
+  <div class="row justify-center">
+    <q-card style="width: 100%;">
       <q-tabs
         v-model="tab"
         inline-label
@@ -9,7 +9,6 @@
         no-caps
         active-color="primary"
         indicator-color="secondary"
-        class="full-width"
       >
         <q-tab class="col-md-2" name="highlights" icon="mdi-party-popper" :label="$t('hightlights')" />
         <q-tab class="col-md-2" name="industries" icon="mdi-factory" :label="$t('industries')" />
@@ -19,7 +18,7 @@
 
       <q-separator />
 
-      <q-tab-panels v-model="tab" animated>
+      <q-tab-panels v-model="tab" animated class="full-width">
         <q-tab-panel name="highlights">
           <highlights />
         </q-tab-panel>
@@ -68,16 +67,6 @@ export default {
   }
 };
 </script>
-
-<style>
-
-body
-{
-  font-family: sans-serif;
-  padding: 1em;
-}
-
-</style>
 
 <i18n>
 {

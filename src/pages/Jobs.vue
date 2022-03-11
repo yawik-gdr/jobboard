@@ -11,6 +11,7 @@
 
       <template #after>
         <jobdetail :selected-job="selectedJob" />
+        <job-detail-frame :selected-job="selectedJob" />
       </template>
     </q-splitter>
     <!-- content -->
@@ -20,6 +21,7 @@
 <script>
 import searchresult from 'src/components/SearchResultSplitted.vue';
 import jobdetail from 'src/components/JobDetail.vue';
+import JobDetailFrame from 'src/components/JobDetailFrame.vue';
 import { ref } from 'vue';
 
 export default {
@@ -33,7 +35,8 @@ export default {
   components:
       {
         searchresult,
-        jobdetail
+        jobdetail,
+        JobDetailFrame
       },
   data()
   {

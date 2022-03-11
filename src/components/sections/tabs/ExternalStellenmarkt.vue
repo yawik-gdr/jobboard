@@ -45,7 +45,6 @@ export default defineComponent({
         l: '',
         d: ''
       },
-      tableFilter: {},
       loading: false,
       pagination: {
         sortBy: 'date',
@@ -58,12 +57,12 @@ export default defineComponent({
     };
   },
   computed:
-      {
-        host()
-        {
-          return process.env.YAWIK_EXTERNAL_JOBS;
-        },
-      },
+  {
+    host()
+    {
+      return process.env.YAWIK_EXTERNAL_JOB_STELLENMARKT;
+    },
+  },
   mounted()
   {
     this.onRequest({
@@ -161,15 +160,6 @@ export default defineComponent({
 
       return data;
     },
-
-    setFilter()
-    {
-      this.tableFilter = {
-        q: this.filter.q,
-        l: this.filter.l,
-        d: this.filter.d
-      };
-    }
   }
 });
 </script>
@@ -179,12 +169,6 @@ export default defineComponent({
   body
   {
     font-family: sans-serif;
-    padding: 1em;
-  }
-
-  .jobs
-  {
-    background-color: $primary-light;
   }
 
 </style>

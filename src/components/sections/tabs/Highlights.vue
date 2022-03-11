@@ -6,12 +6,9 @@
     <div class="col-12">
       <div class="row justify-center q-gutter-md">
         <span v-for="val in rows" :key="val.id" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-          <q-card class="jobs fit">
+          <q-card class="fit cursor-pointer" @click="route(val.id, val.attributes.jobTitle)">
             <q-card-section>
-              <q-item
-                clickable
-                @click="route(val.id, val.attributes.jobTitle)"
-              >
+              <q-item>
                 <q-item-section avatar>
                   <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px"
                          width="100px"
@@ -31,6 +28,7 @@
             </q-card-section>
           </q-card>
         </span>
+        <jobsintown />
         <stellenmarkt />
       </div>
     </div>
@@ -41,6 +39,7 @@
 
 import MyDate from 'src/components/Date.vue';
 import Stellenmarkt from 'src/components/sections/tabs/ExternalStellenmarkt.vue';
+import Jobsintown from 'src/components/sections/tabs/ExternalJobsintown.vue';
 
 import { defineComponent } from 'vue';
 
@@ -49,7 +48,8 @@ export default defineComponent({
   components:
   {
     MyDate,
-    Stellenmarkt
+    Stellenmarkt,
+    Jobsintown
   },
   data()
   {
@@ -127,12 +127,6 @@ export default defineComponent({
   body
   {
     font-family: sans-serif;
-    padding: 1em;
-  }
-
-  .jobs
-  {
-    background-color: $primary-light;
   }
 
 </style>
