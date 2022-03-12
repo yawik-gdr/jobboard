@@ -29,6 +29,7 @@ module.exports = configure(function(ctx)
     boot: [
       'i18n',
       'axios',
+      'helpers',
       {
         path: 'gdpr',
         server: false
