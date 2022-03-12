@@ -28,8 +28,8 @@
             </q-card-section>
           </q-card>
         </span>
-        <jobsintown />
-        <stellenmarkt />
+        <jwn />
+        <skt />
       </div>
     </div>
   </div>
@@ -38,8 +38,8 @@
 <script>
 
 import MyDate from 'src/components/Date.vue';
-import Stellenmarkt from 'src/components/sections/tabs/ExternalStellenmarkt.vue';
-import Jobsintown from 'src/components/sections/tabs/ExternalJobsintown.vue';
+import Skt from 'src/components/sections/tabs/ExternalSkt.vue';
+import Jwn from 'src/components/sections/tabs/ExternalJwn.vue';
 
 import { defineComponent } from 'vue';
 
@@ -48,8 +48,8 @@ export default defineComponent({
   components:
   {
     MyDate,
-    Stellenmarkt,
-    Jobsintown
+    Skt,
+    Jwn
   },
   data()
   {

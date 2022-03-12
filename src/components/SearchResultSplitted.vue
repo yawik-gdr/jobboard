@@ -1,61 +1,101 @@
 <template>
-  <div class="row">
-    <span v-for="(val, index) in rows" :key="val.id" class="col-12">
-      <q-card class="jobs fit">
-        <q-card-section>
-          <q-item
-            :class="index==selectedIndex?'highlights':''"
-            clickable
-            @click="emitData(val, index)"
-          >
-            <q-item-section avatar>
-              <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px"
-                     width="100px"
-              />
-              <date :date="val.attributes.createdAt" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label align="left">
-                {{ val.attributes.jobTitle }}
-              </q-item-label>
-              <q-item-label align="left" caption>
-                {{ val.attributes.organization }}
-              </q-item-label>
-              <q-item-label align="left" caption>{{ val.attributes.formattedAddress }}</q-item-label>
-            </q-item-section>
-          </q-item>
-        </q-card-section>
-      </q-card>
-    </span>
-  </div>
+  <q-scroll-area :style="'height: ' + $q.screen.height + 'px;'">
+    <q-infinite-scroll :offset="250" @load="getJobs">
+      <div ref="scrollTargetRef" class="row">
+        <span v-for="(val, index) in rows" :key="val.id" class="col-12">
+          <q-card class="jobs fit">
+            <q-card-section>
+              <q-item
+                :class="index==selectedIndex?'highlights':''"
+                clickable
+                @click="emitData(val, index)"
+              >
+                <q-item-section avatar>
+                  <q-img fit="contain" :src="jobDetailUrl + 'logo/' + val.companyId" height="50px"
+                         width="100px"
+                  >
+                    <template #loading>
+                      <q-spinner-orbit size="xs" color="grey" />
+                    </template>
+                  </q-img>
+                  <date :date="val.datePublishStart" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label align="left">
+                    {{ val.title }}
+                  </q-item-label>
+                  <q-item-label align="left" caption>
+                    {{ val.companyName }}
+                  </q-item-label>
+                  <q-item-label align="left" caption>{{ val.regionText }}</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-card-section>
+          </q-card>
+        </span>
+      </div>
+      <template #loading>
+        <div class="row justify-center q-my-md">
+          <q-spinner-dots color="primary" size="40px" />
+        </div>
+      </template>
+    </q-infinite-scroll>
+  </q-scroll-area>
 </template>
 
 <script>
 import Date from 'src/components/Date.vue';
-import { defineComponent } from 'vue';
-//import { getWindow } from 'ssr-window';
-//const window=getWindow();
+import { defineComponent, ref } from 'vue';
+
 export default defineComponent({
   name: 'SearchResultSplitted',
   components:
-  {
-    Date
+      {
+        Date
+      },
+  props: {
+    query:
+      {
+        type: String,
+        required: false,
+        default: '*'
+      },
+    distance:
+      {
+        type: Object,
+        required: false,
+        default: null
+      },
+    coordinates:
+      {
+        type: Object,
+        required: false,
+        default: null
+      },
+    region:
+      {
+        type: String,
+        required: false,
+        default: null
+      },
+    company:
+      {
+        type: String,
+        required: false,
+        default: null
+      }
   },
   emits: ['click'],
   setup()
   {
+    const scrollTargetRef = ref(null);
     return {
-      jobsUrl: `${process.env.YAWIK_JOB_URL}/api/jobs`,
-      jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
+      jobsUrl: `${process.env.YAWIK_EXTERNAL_API_JWN}`,
+      scrollTargetRef,
+      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_JWN}`,
       loading: false,
-      rowsPerPageOptions: [10, 25, 50, 100],
-      pagination: {
-        sortBy: 'desc',
-        descending: true,
-        rowsNumber: 10,
-        page: 1,
-        rowsPerPage: 10
-      },
+      start: 0,
+      rowsPerPage: 20,
     };
   },
   data()
@@ -65,54 +105,123 @@ export default defineComponent({
       selectedIndex: null
     };
   },
-  computed:
-      {
-        jobHost()
-        {
-          return process.env.YAWIK_JOB_URL;
-        },
-      },
-  mounted()
-  {
-    this.getJobs();
+  watch: {
+    query(newVal, oldVal)
+    {
+      this.resetAttrib();
+    },
+    coordinates(newVal, oldVal)
+    {
+      this.resetAttrib();
+    },
+    distance(newVal, oldVal)
+    {
+      this.resetAttrib();
+    }
   },
   methods:
       {
-        getJobs(pagination = { pagination: this.pagination })
+        resetAttrib()
         {
-          this.loading = true;
-          this.$axios.get(this.jobsUrl, {
-            params: {
-              'pagination[page]': pagination.pagination.page,
-              'pagination[pageSize]': pagination.pagination.rowsPerPage,
-              populate: 'html,logo',
-              sort: 'publishedAt:desc'
+          this.rows = [];
+          this.start = 0;
+          this.getJobs(1);
+        },
+        getJobs(index, done)
+        {
+          const routeName = this.$route.name;
+          let params = {};
+          switch (routeName)
+          {
+            case 'jobs':
+              params = {
+                q: '*',
+                start: this.start,
+                rows: this.rowsPerPage,
+                sort: 'score desc,random_123 desc',
+              };
+              break;
+            case 'search-jobs':
+              params = {
+                q: this.query,
+                start: this.start,
+                rows: this.rowsPerPage,
+                sort: 'score desc,random_123 desc',
+              };
+              break;
+            case 'selected-job':
+              params = {
+                q: this.query,
+                start: this.start,
+                bq: this.selectedIndex ? '' : 'id:' + this.$route.params.id + '^1000',
+                rows: this.rowsPerPage,
+                sort: 'score desc,random_123 desc',
+              };
+              break;
+            case 'jobs-in':
+              params = {
+                q: this.query,
+                start: this.start,
+                rows: this.rowsPerPage,
+                sort: 'score desc,random_123 desc',
+                fq: `regionList:${this.region}`
+              };
+              break;
+            case 'jobs-by':
+              params = {
+                q: this.query,
+                start: this.start,
+                rows: this.rowsPerPage,
+                sort: 'score desc,random_123 desc',
+                fq: `companyTag:"${this.company}"`
+              };
+              break;
+            case 'jobs-near-by':
+            {
+              const lat = this.coordinates.lat;
+              const lng = this.coordinates.lng;
+              const dist = this.distance.id || 20;
+              params = {
+                q: this.query,
+                start: this.start,
+                rows: this.rowsPerPage,
+                sort: `geodist(lonLat,${lat},${lng}) asc, isTopJob desc`,
+                fq: `{!geofilt pt=${lat},${lng} sfield=geoLocation d=${dist}}`
+              };
+              break;
             }
           }
-          ).then(response =>
+
+          this.loading = true;
+          this.$axios.get(this.jobsUrl, {
+            params: params
+          }).then(response =>
           {
-            this.rows = response.data.data;
-            this.setPagination(response.data.meta.pagination);
+            this.rows = this.rows.concat(response.data.response.docs);
             const selectedId = parseInt(this.$route.params.id);
-            const index = this.rows.findIndex(({ id }) => id === selectedId);
-            if (index !== -1)
+            const i = this.rows.findIndex(({ id }) => id === selectedId);
+            if (i !== -1)
             {
-              this.emitData(this.rows[index], index);
+              this.emitData(this.rows[i], i);
+            }
+            else
+            {
+              this.emitData(this.rows[0], 0);
+            }
+            this.start = index * this.rowsPerPage;
+            const totalRecords = response.data.response.numFound;
+            const stop = this.rows.length >= totalRecords;
+            console.log('Rows Length# ' + this.rows.length);
+            console.log('Should Stop# ' + stop);
+            console.log('Total Records ' + totalRecords);
+            if (typeof done !== 'undefined')
+            {
+              done(stop);
             }
           }).finally(() =>
           {
             this.loading = false;
           });
-        },
-        setPagination(pagination)
-        {
-          this.pagination = {
-            sortBy: 'asc',
-            descending: true,
-            rowsNumber: pagination.total,
-            page: pagination.page,
-            rowsPerPage: pagination.pageSize
-          };
         },
         convertToSlug(title)
         {
@@ -122,35 +231,42 @@ export default defineComponent({
         },
         emitData(job, index)
         {
-          const id = job.id;
-          const title = this.convertToSlug(job.attributes.jobTitle);
-          if (typeof window !== 'undefined')
+          if (job != null)
           {
-            window.history.pushState('', 'Title', '/jobs/' + id + '/' + title);
+            const id = job.id;
+            const title = this.convertToSlug(job.title);
+            if (typeof window !== 'undefined')
+            {
+              window.history.pushState('', 'Title', `/jobs/${id}/${title}`);
+            }
+            this.selectedIndex = index;
+            this.$emit('click', { job: job });
           }
-          this.selectedIndex = index;
-          this.$emit('click', { job: job });
         }
       }
 });
 </script>
 
 <style lang="scss" scoped>
-
   .highlights
   {
     background-color: $secondary-light;
   }
 
+  .q-card__section--vert
+  {
+    padding: 0px;
+  }
+
 </style>
 
 <i18n>
-  {
+{
   "en": {
   "search-placeholder": "Job title, Company or Location",
   },
   "de": {
   "search-placeholder": "Anzeigentitel, Firma oder Ort",
   }
-  }
+}
 </i18n>

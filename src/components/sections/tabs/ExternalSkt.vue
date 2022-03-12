@@ -32,7 +32,7 @@ import MyDate from 'src/components/Date.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'ExternalStellenmarkt',
+  name: 'ExternalSkt',
   components:
   {
     MyDate

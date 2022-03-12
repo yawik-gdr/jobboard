@@ -1,6 +1,5 @@
 <template>
-  <q-page padding>
-    <h4>{{ $t('jobs') }}</h4>
+  <q-page>
     <q-splitter
       v-model="splitterModel"
       style="height: 95%;"
@@ -10,7 +9,6 @@
       </template>
 
       <template #after>
-        <jobdetail :selected-job="selectedJob" />
         <job-detail-frame :selected-job="selectedJob" />
       </template>
     </q-splitter>
@@ -20,7 +18,6 @@
 
 <script>
 import searchresult from 'src/components/SearchResultSplitted.vue';
-import jobdetail from 'src/components/JobDetail.vue';
 import JobDetailFrame from 'src/components/JobDetailFrame.vue';
 import { ref } from 'vue';
 
@@ -35,7 +32,6 @@ export default {
   components:
       {
         searchresult,
-        jobdetail,
         JobDetailFrame
       },
   data()

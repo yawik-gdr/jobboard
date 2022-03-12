@@ -74,7 +74,7 @@ import MaxLength from 'src/components/MaxLength.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'ExternalJobsintown',
+  name: 'ExternalJwn',
   components:
   {
     MyDate,
@@ -92,8 +92,8 @@ export default defineComponent({
         rowsNumber: 10
       },
       rows: [],
-      jobsUrl: `${process.env.YAWIK_EXTERNAL_API_JOBSINTOWN}`,
-      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_JOBSINTOWN}`
+      jobsUrl: `${process.env.YAWIK_EXTERNAL_API_JWN}`,
+      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_JWN}`
     };
   },
   mounted()
