@@ -100,7 +100,7 @@ export default defineComponent({
     }
 
     return {
-      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_JWN}`,
+      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`,
       pageTitle,
       pageDescription,
       pageKeywords

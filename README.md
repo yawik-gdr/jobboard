@@ -40,7 +40,9 @@ Values in `.env.local` overwrite those in `.env`
 | YAWIK_BACKGROUND             | Background Image on Startpage              |
 | YAWIK_EXTERNAL_JOBS          | https://yawik.org/demo/de/jobboard         |
 | YAWIK_JOB_URL                | Endpoint for job details                   |
-| YAWIK_API_URL                | Endpoint for job lists                     |
+| YAWIK_SEARCH_URL             | Endpoint for job lists                     |
+| YAWIK_EXTERNAL_SEARCH_URL    | External Job search                        |
+| YAWIK_EXTERNAL_JOB_URL       | External Job Details                       |
 | YAWIK_URL_OPERATOR           | Links to the opeartor of the form          |
 | YAWIK_URL_IMPRINT            | Link to the Imprint of the operator        |
 | YAWIK_URL_PRIVACY            | Link to the Privacy notes                  |

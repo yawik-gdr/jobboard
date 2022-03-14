@@ -29,7 +29,6 @@
           </q-card>
         </span>
         <jwn />
-        <skt />
       </div>
     </div>
   </div>
@@ -38,7 +37,6 @@
 <script>
 
 import MyDate from 'src/components/Date.vue';
-import Skt from 'src/components/sections/tabs/ExternalSkt.vue';
 import Jwn from 'src/components/sections/tabs/ExternalJwn.vue';
 
 import { defineComponent } from 'vue';
@@ -48,7 +46,6 @@ export default defineComponent({
   components:
   {
     MyDate,
-    Skt,
     Jwn
   },
   data()
@@ -63,16 +60,16 @@ export default defineComponent({
         rowsNumber: 10
       },
       rows: [],
-      jobsUrl: `${process.env.YAWIK_API_URL}/api/jobs`,
+      jobsUrl: `${process.env.YAWIK_SEARCH_URL}/api/jobs`,
     };
   },
   computed:
-      {
-        jobHost()
-        {
-          return process.env.YAWIK_JOB_URL;
-        },
-      },
+  {
+    jobHost()
+    {
+      return process.env.YAWIK_SEARCH_URL;
+    },
+  },
   mounted()
   {
     this.getJobs();

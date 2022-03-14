@@ -82,8 +82,8 @@ export default {
       },
       companies: [],
       rows: [],
-      jobsUrl: `${process.env.YAWIK_EXTERNAL_API_JWN}`,
-      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_JWN}`,
+      jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
+      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`,
     };
   },
   mounted()

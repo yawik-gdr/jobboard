@@ -16,7 +16,7 @@ export default {
   name: 'Date',
   props: {
     date: {
-      type: String,
+      type: [String, Object],
       required: true,
       default: ''
     }

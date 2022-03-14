@@ -54,7 +54,7 @@ export default {
         rowsNumber: 10
       },
       rows: [],
-      jobsUrl: `${process.env.YAWIK_EXTERNAL_API_JWN}`,
+      jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
       // jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
     };
   },

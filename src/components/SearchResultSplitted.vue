@@ -78,9 +78,9 @@ export default defineComponent({
   {
     const scrollTargetRef = ref(null);
     return {
-      jobsUrl: `${process.env.YAWIK_EXTERNAL_API_JWN}`,
+      jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
       scrollTargetRef,
-      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_JWN}`,
+      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`,
       loading: false,
       start: 0,
       rowsPerPage: 20,

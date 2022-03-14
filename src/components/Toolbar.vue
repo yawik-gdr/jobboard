@@ -46,6 +46,7 @@
     </q-btn>
     <q-separator dark vertical />
     <q-space />
+    <login />
     <switch-language />
   </q-toolbar>
 </template>
@@ -55,12 +56,14 @@
 import { defineComponent } from 'vue';
 import menu from 'src/assets/menu/top';
 import SwitchLanguage from 'src/components/SwitchLanguage.vue';
+import Login from 'src/components/Login.vue';
 
 export default defineComponent({
   name: 'Toolbar',
   emits: ['toggle-drawer'],
   components: {
-    SwitchLanguage
+    SwitchLanguage,
+    Login
   },
   computed:
   {
