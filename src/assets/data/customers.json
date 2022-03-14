@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Materna Information & Communications SE",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Materna_Bildmarke.png/480px-Materna_Bildmarke.png",
+        "url": "https://de.wikipedia.org/wiki/Materna_(Unternehmen)",
+        "description": "Die Materna Information & Communications SE ist ein weltweit tätiges Unternehmen im Bereich IT-Dienstleistungen. Materna wurde 1980 gegründet, der Stammsitz befindet sich in Dortmund."    
+    },
+    {
+        "name": "MED-EL Medical Electronics",
+        "logo": "https://upload.wikimedia.org/wikipedia/de/d/dd/MED-EL_Logo.svg",
+        "url": "https://de.wikipedia.org/wiki/MED-EL",
+        "description": "MED-EL entwickelt und produziert implantierbare Hörsysteme (Cochleaimplantate, Mittelohr-Implantat, Knochenleitungs-Implantate und Hörsysteme mit elektro-akustischer Stimulation)"
+    },
+    {
+        "name": "ADG Apotheken-Dienstleistungsgesellschaft mbH",
+        "logo": "https://www.adg.de/fileadmin/img/ADG-Logo-2016.png",
+        "home": "https://www.adg.de/",
+        "description": "Die ADG stellt mit der Entwicklung von Warenwirtschafts-, Kassen- und Managementsystemen innovative IT-Lösungen für Apotheken bereit."
+    },
+    {
+        "name": "Personalstrategie GmbH",
+        "logo": "https://jobs.personalstrategie.de/v1553330681/public_data/logo-screen.jpg",
+        "home": "https://personalstrategie.de/",
+        "description": "Personalagentur für Führungskräfte und Spezialisten mit Sitz in München."
+    },
+    {
+        "name": "DMK E-BUSINESS GmbH",
+        "logo": "https://www.dmk-ebusiness.de/fileadmin/_processed_/e/f/csm_DMK_E-BUSINESS_logo_blau_1000x1000_57da517392.png",
+        "home": "https://www.dmk-ebusiness.de/",
+        "description": "Die digitale Welt ist komplex. Allein unterwegs geht der Überblick in der digitalen Transformation schnell verloren."
+    },
+    {
+        "name": "Helbling Technik GmbH",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/59/Helbling_Logo.svg",
+        "url": "https://de.wikipedia.org/wiki/Bayer_AG",
+        "description": "Die 1963 gegründete, international tätige Helbling Unternehmensgruppe positioniert sich als interdisziplinärer Leistungsverbund von Engineering- und Consulting-Kompetenzen."
+    },
+    {
+        "name": "JDM Innovation GmbH",
+        "logo": "https://www.jdm.de/typo3conf/ext/adg/Resources/Public/Images/logo-jdm.png",
+        "home": "https://www.jdm.de/",
+        "description": "Schwäbischer Erfindergeist plus Herzblut"
+    },
+    {
+        "name": "Adlatus Robotics GmbH",
+        "logo": "https://www.adlatus.eu/wp-content/uploads/2016/07/ADLATUS-Logo.png",
+        "home": "https://www.adlatus.eu/",
+        "description": "Die ADLATUS Robotics GmbH entwickelt, produziert & vertreibt Service Robots und bietet Komplettlösungen inkl. Beratung, Inbetriebnahme, Schulungen und Service an."
+    },
+    {
+        "name": "Apleona GmbH",
+        "logo": "https://www.apleona.com/typo3conf/ext/lin_template/Resources/Public/Images/logo.svg",
+        "url": "https://de.wikipedia.org/wiki/Apleona",
+        "description": "Die Apleona Group GmbH ist ein deutscher Dienstleister der Immobilienbranche mit Sitz in Neu-Isenburg."
+    },
+    {
+        "name": "Bundesamt für Soziale Sicherung‘",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/Bundesamt_f%C3%BCr_Soziale_Sicherung_logo.svg",
+        "url": "https://de.wikipedia.org/wiki/Bundesamt_f%C3%BCr_Soziale_Sicherung",
+        "description": "Das Bundesamt für Soziale Sicherung (BAS), bis 2019 Bundesversicherungsamt (BVA),[2] ist eine deutsche Bundesoberbehörde mit Sitz in Bonn."
+    },
+    {
+        "name": "MATERNA TMT GmbH",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Materna_Bildmarke.png/480px-Materna_Bildmarke.png",
+        "home": "https://www.materna-tmt.de/",
+        "description": "Als 100%iges Tochterunternehmen der Materna Gruppe aus Dortmund sind wir es so gewohnt. In einem Familienunternehmen, das weltweit tätig ist, stehen alle mit beiden Beinen auf dem Boden, haben den Kopf voller Ideen und müssen sich nicht verstellen. Wir sind so! Probieren Sie es aus!"
+    },
+    {
+        "name": "STEMMER IMAGING AG",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c2/STEMMER-IMAGING-Logo-RGB.svg",
+        "url": "https://de.wikipedia.org/wiki/Stemmer_Imaging",
+        "description": "Die Stemmer Imaging AG mit Sitz in Puchheim (Bayern) ist ein internationales Unternehmen im Bereich Bildverarbeitungstechnologie."
+    },
+    {
+        "name": "SARSTEDT AG & Co. KG",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/65/Sarstedt_Logo.svg",
+        "url": "https://de.wikipedia.org/wiki/Sarstedt_AG_%26_Co._KG",
+        "description": "Die Sarstedt AG & Co. KG ist ein weltweit führender Hersteller von Labor- und Medizintechnik mit Stammsitz in Nümbrecht im Oberbergischen Kreis."
+    },
+    {
+        "name": "Deutsche Vermögensberatung Aktiengesellschaft",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3c/DVAG-Logo-gold.svg",
+        "url": "https://de.wikipedia.org/wiki/Deutsche_Verm%C3%B6gensberatung",
+        "description": "Die Deutsche Vermögensberatung AG (DVAG) ist ein in Deutschland, Österreich und der Schweiz tätiger Finanzvertrieb."
+    },
+    {
+        "name": "Ragaller GmbH & Co. Betriebs KG",
+        "logo": "https://www.ragaller.com/wp-content/uploads/2021/11/ragaller_logo.svg",
+        "home": "https://www.ragaller.com/",
+        "description": "Anbieter von Verpackungen für Lebensmittel, Produkten für den gedeckten Tisch und Hygieneartikeln für Waschräume und Küche"
+    },
+    {
+        "name": "rocon Rohrbach EDV-Consulting GmbH",
+        "logo": "https://www.rocon.info/wp-content/uploads/rocon.png",
+        "home": "https://www.rocon.info/",
+        "description": "Als zertifizierter SAP Partner unterstützen wir Sie dabei und finden die passende Softwarelösung für Ihr Unternehmen."
+    },
+    {
+        "name": "agineo GmbH",
+        "logo": "https://www.agineo.de/wp-content/uploads/2018/03/Logo_Agineo_V2-1024x1016.jpg",
+        "home": "https://www.agineo.de/",
+        "description": "Gegründet wurde die agineo GmbH als ComConsult Kommunikationstechnik GmbH 1986 von Absolventen der RWTH-Aachen. Materna hat das Aachener Unternehmen zum 1. Juli 2017 übernommen und gemeinsam eine neue Marke gegründet."
+    },
+    {
+        "name": "Dehner Holding GmbH & Co. KG'",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Dehner.svg",
+        "url": "https://de.wikipedia.org/wiki/Dehner_(Unternehmen)",
+        "description": "Gegründet wurde die agineo GmbH als ComConsult Kommunikationstechnik GmbH 1986 von Absolventen der RWTH-Aachen. Materna hat das Aachener Unternehmen zum 1. Juli 2017 übernommen und gemeinsam eine neue Marke gegründet."
+    },
+    {
+        "name": "Die Coditorei GmbH",
+        "home": "https://coderei.dev/",
+        "description": "Entwicklung individueller Webanwendungen für Unternehmen"
+    },
+    {
+        "name": "VGH Versicherungen",
+        "logo": "https://upload.wikimedia.org/wikipedia/de/6/6c/Logo_VGH_Versicherungen.svg",
+        "url": "https://de.wikipedia.org/wiki/VGH_Versicherungen",
+        "description": "Die VGH Versicherungen sind ein Zusammenschluss der Landschaftlichen Brandkasse Hannover, der Provinzial Lebensversicherung Hannover, der Provinzial Krankenversicherung Hannover AG und der Provinzial Pensionskasse Hannover AG."
+    },
+    {
+        "name": "NÜRNBERGER Lebensversicherung AG",
+        "url": "https://de.wikipedia.org/wiki/N%C3%BCrnberger_Versicherung",
+        "description": "Die Nürnberger Versicherung (Eigenschreibweise: NÜRNBERGER) ist ein deutsches Versicherungsunternehmen mit Sitz in Nürnberg."
+    },
+    {
+        "name": "DYWIDAG-Systems International GmbH",
+        "url": "https://de.wikipedia.org/wiki/DYWIDAG-Systems_International",
+        "description": "DYWIDAG-Systems International (DSI) ist ein weltweit tätiger Technologiekonzern im Bau- und Bergbaubereich. Die DSI Holding GmbH hat ihren Sitz in München."
+    },
+    {
+        "name": "Universität Würzburg",
+        "url": "https://www.uni-wuerzburg.de/",
+        "description": "Die Julius-Maximilians-Universität Würzburg (JMU) bietet als Volluniversität ein breites und innovatives Fächerspektrum,"
+    },
+    {
+        "name": "Personalwerk Holding GmbH",
+        "home": "https://www.personalwerk.de",
+        "description": "Agentur für Personalmarketing, Stellenanzeigenschaltung, Personaberatung & E-Recruiting."
+    },
+    {
+        "name": "Landesbetrieb Geoinformation und Vermessung",
+        "home": "https://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/",
+        "description": "Der Landesbetrieb Geoinformation und Vermessung (LGV) ist der zukunftsgestaltende und innovative Dienstleister, wenn es um die Erhebung, Pflege und Bereitstellung von (Geo-)Daten geht."
+    },
+    {
+        "name": "treubuch IT GmbH",
+        "home": "https://www.treubuch-steuerberater.de/it-loesungen/",
+        "description": "Die treubuch IT GmbH entwickelt mit zahlreichen hochqualifizierten IT-Spezialisten zertifizierte Individual-Software für die TREUBUCH-Colonia und deren Mandanten."
+    },
+    {
+        "name": "D&B INTERACTIVE GmbH",
+        "home": "https://www.treubuch-steuerberater.de/it-loesungen/",
+        "description": "Die treubuch IT GmbH entwickelt mit zahlreichen hochqualifizierten IT-Spezialisten zertifizierte Individual-Software für die TREUBUCH-Colonia und deren Mandanten."
+    }
+]

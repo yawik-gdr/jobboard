@@ -47,7 +47,7 @@
 
 import { ref } from 'vue';
 import highlights from 'src/components/sections/tabs/Highlights.vue';
-import companies from 'src/components/sections/tabs/Companies.vue';
+import companies from 'src/components/sections/tabs/Customers.vue';
 import industries from 'src/components/sections/tabs/Industries.vue';
 import cities from 'src/components/sections/tabs/Cities.vue';
 

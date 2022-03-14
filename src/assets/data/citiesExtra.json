@@ -1,0 +1,203 @@
+[
+    {
+        "name": "Frankfurt am Main",
+        "region": "Hessen",
+        "url": "http://jobs-frankfurt.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wikipedia": "https://de.wikipedia.org/wiki/Frankfurt_am_Main",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/65/Wappen_Frankfurt_am_Main.svg"
+    },
+    {
+        "name": "Berlin",
+        "region": "Berlin",
+        "url": "http://jobs-berlin.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wikipedia": "https://de.wikipedia.org/wiki/Berlin",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/d/d9/Coat_of_arms_of_Berlin.svg"
+
+    },
+    {
+        "name": "Bremen",
+        "region": "Bremen",
+        "url": "http://jobs-bremen.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/64/Bremen_Wappen%28Mittel%29.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Bremen"
+    },
+    {
+        "name": "Hamburg",
+        "region": "Hamburg",
+        "url": "http://jobs-hamburg.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wikipedia": "https://de.wikipedia.org/wiki/Hamburg",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/63/Wappen_der_Hamburgischen_B%C3%BCrgerschaft.svg"
+    },
+    {
+        "name": "Karben",
+        "region": "Hessen",
+        "url": "http://jobs-karben.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wikipedia": "https://de.wikipedia.org/wiki/Karben",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/c/ce/Wappen_Karben.png"
+    },
+    {
+        "name": "Mainz",
+        "region": "Rheinland-Pflaz",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "url": "http://jobs-mainz.de",
+        "wikipedia": "https://de.wikipedia.org/wiki/Mainz",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/6/67/Coat_of_arms_of_Mainz-2008_new.svg"
+    },
+    {
+        "name": "Düsseldorf",
+        "region": "Niedersachsen",
+        "url": "http://jobs-duesseldorf.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/8/83/DEU_D%C3%BCsseldorf_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/D%C3%BCsseldorf"
+    },
+    {
+        "name": "Stuttgart",
+        "region": "Baden-Württemberg",
+        "url": "http://jobs-stuttgart.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/f/f8/Coat_of_arms_of_Stuttgart.svg",
+        "wikipedia": "https://upload.wikimedia.org/wikipedia/commons/f/f1/DEU_Koeln_COA.svg"
+    },
+    {
+        "name": "Köln",
+        "region": "Nordrhein-Westfalen",
+        "url": "http://jobs-koeln.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/f/f1/DEU_Koeln_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/K%C3%B6ln"
+    },
+    {
+        "name": "München",
+        "region": "Bayern",
+        "url": "http://jobs-muenchen.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/1/17/Muenchen_Kleines_Stadtwappen.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/M%C3%BCnchen"
+    },
+    {
+        "name": "Leipzig",
+        "region": "Sachsen",
+        "url": "http://jobs-leipzig.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/4/47/Coat_of_arms_of_Leipzig.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Leipzig"
+    },
+    {
+        "name": "Nürnberg",
+        "region": "Bayern",
+        "url": "https://www.nuernberger-jobanzeiger.de/",
+        "icon": "img:https://d3r4f9ursifuvh.cloudfront.net/static/fach/images/favicons/ec3a1c.12ecf9e87dce.png",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/f/f3/DEU_N%C3%BCrnberg_COA_%28klein%29.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/N%C3%BCrnberg"
+    },
+    {
+        "name": "Bonn",
+        "region": "Nordrhein-Westfalen",
+        "url": "https://www.jobs-in-bonn.de",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/8/83/DEU_D%C3%BCsseldorf_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/D%C3%BCsseldorf"
+    },
+    {
+        "name": "Darmstadt",
+        "region": "Hessen",
+        "url": "https://www.jobs-darmstadt.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/2/28/Wappen_Darmstadt.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Darmstadt"
+    },
+    {
+        "name": "Kiel",
+        "region": "Schleswig-Holstein",
+        "url": "http://www.jobskiel.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/1/1e/Wappen_Kiel_%28Alternativ%29.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Kiel"
+    },
+    {
+        "name": "Aachen",
+        "region": "Nordrhein-Westfalen",
+        "url": "http://www.jobsaachen.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/7/7d/DEU_Aachen_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Aachen"
+    },
+    {
+        "name": "Arnsberg",
+        "region": "Nordrhein-Westfalen",
+        "url": "https://www.jobs-arnsberg.de/",
+        "icon": "img:https://www.jobs-arnsberg.de/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/7/7d/DEU_Aachen_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Arnsberg"
+    },
+    {
+        "name": "Dortmund",
+        "region": "Nordrhein-Westfalen",
+        "url": "https://www.jobs-dortmund.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/f/f9/DEU_Dortmund_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Dortmund"
+    },
+    {
+        "name": "Hannover",
+        "region": "Niedersachsen",
+        "url": "https://www.jobs-hannover.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/4/43/Coat_of_arms_of_Hannover.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Hannover"
+    },
+    {
+        "name": "Dresden",
+        "region": "Sachsen",
+        "url": "https://www.jobs-dresden.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/d/dc/Dresden_Stadtwappen.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Dresden"
+    },
+    {
+        "name": "Erlangen",
+        "region": "Mittelfranken",
+        "url": "https://www.jobs-erlangen.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/8/87/Wappen_Erlangen.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Erlangen"
+    },
+    {
+        "name": "Innsbruck",
+        "region": "Tirol",
+        "url": "https://www.jobs-insbruck.at/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/0/03/AUT_Innsbruck_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Innsbruck"
+    },
+    {
+        "name": "Chemnitz",
+        "region": "Sachsen",
+        "url": "https://www.jobs-chemnitz.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/0/07/Coat_of_arms_of_Chemnitz.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Chemnitz"
+    },
+    {
+        "name": "Karlsruhe",
+        "region": "Baden-Württemberg",
+        "url": "https://www.jobskarlsruhe.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/0/0a/DEU_Karlsruhe_COA.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Karlsruhe"
+    },
+    {
+        "name": "Mannheim",
+        "region": "Baden-Württemberg",
+        "url": "https://www.jobsmannheim.de/",
+        "icon": "img:https://www.jobsintown.de/fileadmin/templates/www.jobsintown.de/public/favicon.ico",
+        "wappen": "img:https://upload.wikimedia.org/wikipedia/commons/f/fd/Wappen_Mannheim.svg",
+        "wikipedia": "https://de.wikipedia.org/wiki/Mannheim"
+    }
+]
