@@ -45,10 +45,10 @@
           </q-item-section>
         </q-item>
       </q-card-section>
-      <q-card-action class="relativ-position absolute-bottom">
+      <q-card-actions class="relativ-position absolute-bottom">
         <q-badge color="grey-2"><my-date :date="val.doclist.docs[0].datePublishStart" /></q-badge>
-      </q-card-action>
-      <q-card-action>
+      </q-card-actions>
+      <q-card-actions>
         <q-badge
           v-if="val.doclist.numFound > 1"
           color="secondary"
@@ -62,7 +62,7 @@
             {{ $t('more') }}
           </q-tooltip>
         </q-badge>
-      </q-card-action>
+      </q-card-actions>
     </q-card>
   </span>
 </template>
