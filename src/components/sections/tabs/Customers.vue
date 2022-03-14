@@ -23,15 +23,18 @@
               <q-tooltip>
                 {{ val.doclist.docs[0].companyName }}
               </q-tooltip>
+              <template #loading>
+                <q-spinner-orbit size="xs" color="grey" />
+              </template>
             </q-img>
           </q-card-section>
           <q-card-section>
             <div>
               {{ desc(val.doclist.docs[0]) }}
             </div>
-            <br>
+            <br><br>
           </q-card-section>
-          <q-card-action class="relative-position absolute-bottom bg-grey-3">
+          <q-card-actions align="center" class="relative-position absolute-bottom bg-grey-3">
             <q-btn
               :label="$t('jobs')"
               no-caps
@@ -46,7 +49,7 @@
               type="a"
               :href="link(val.doclist.docs[0])"
             />
-          </q-card-action>
+          </q-card-actions>
         </q-card>
       </span>
     </div>

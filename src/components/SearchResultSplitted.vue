@@ -72,18 +72,6 @@ export default defineComponent({
         required: false,
         default: null
       },
-    region:
-      {
-        type: String,
-        required: false,
-        default: null
-      },
-    company:
-      {
-        type: String,
-        required: false,
-        default: null
-      }
   },
   emits: ['click'],
   setup()
@@ -164,7 +152,7 @@ export default defineComponent({
                 start: this.start,
                 rows: this.rowsPerPage,
                 sort: 'score desc,random_123 desc',
-                fq: `regionList:${this.region}`
+                fq: `regionList:${this.$route.params.region}`
               };
               break;
             case 'jobs-by':
@@ -173,7 +161,7 @@ export default defineComponent({
                 start: this.start,
                 rows: this.rowsPerPage,
                 sort: 'score desc,random_123 desc',
-                fq: `companyTag:"${this.company}"`
+                fq: `companyTag:"${this.$route.params.company}"`
               };
               break;
             case 'jobs-near-by':
