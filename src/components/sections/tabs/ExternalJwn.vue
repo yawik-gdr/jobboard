@@ -104,7 +104,7 @@ export default defineComponent({
     route(id, title)
     {
       this.$router.push({
-        name: 'jobs',
+        name: 'selected-job',
         params: {
           id: id,
           title: title
