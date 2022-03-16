@@ -21,7 +21,7 @@
       :label="$t('where')"
       color="primary"
       bg-color="white"
-      class="desktop-only col-md-3 col-xs-6"
+      class="desktop-only gt-sm col-md-3 col-xs-6"
       name="location"
       clearable
       clear-icon="close"
@@ -31,7 +31,7 @@
     <q-select
       v-model="distance"
       bg-color="white"
-      class="desktop-only col-md-2 col-xs-6"
+      class="desktop-only  col-md-2 col-xs-6"
       square
       outlined
       :options="options"
@@ -240,8 +240,8 @@ export default defineComponent({
   },
   "de": {
   "search": "Jobs finden",
-  "what": "was suchen sie?",
-  "where": "wo suchen sie?",
+  "what": "Was suchen Sie?",
+  "where": "Wo suchen Sie?",
   "distance":"Umkreis",
   },
   "fr": {

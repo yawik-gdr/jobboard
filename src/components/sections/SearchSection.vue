@@ -10,10 +10,10 @@
         active-color="primary"
         indicator-color="secondary"
       >
-        <q-tab class="col-md-2" name="highlights" icon="mdi-party-popper" :label="$t('hightlights')" />
+        <q-tab class="col-md-2" name="highlights" icon="star" :label="$t('highlights')" />
         <q-tab class="col-md-2" name="industries" icon="mdi-factory" :label="$t('industries')" />
         <q-tab class="col-md-2" name="cities" icon="location_city" :label="$t('cities')" />
-        <q-tab class="col-md-2" name="companies" icon="mdi-domain" :label="$t('companies')" />
+        <q-tab class="col-md-2" name="companies" icon="domain" :label="$t('companies')" />
       </q-tabs>
 
       <q-separator />
@@ -71,19 +71,19 @@ export default {
 <i18n>
 {
   "en": {
-    "companies": "big Companies",
+    "companies": "Companies",
     "cities": "Cities",
     "industries": "Industries",
     "highlights": "Highlights",
   },
   "de": {
-    "companies": "große Unternehmen",
+    "companies": "Unternehmen",
     "cities": "Städte",
     "industries": "Branchen",
     "highlights": "Highlights",
   },
   "fr": {
-    "companies": "grandes entreprises",
+    "companies": "Entreprises",
     "cities": "Villes",
     "industries": "Branches",
     "highlights": "Points forts",

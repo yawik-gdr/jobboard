@@ -17,6 +17,7 @@ export default
   location: () => 'Location',
   company: () => 'Company',
   recruiter: () => 'Recruiter',
+  wellcome: 'Wellcome',
   btn:
   {
     login: () => 'Login',
@@ -54,6 +55,11 @@ export default
     country: () => 'Country',
     countries: () => 'Countries',
     location: () => 'Location',
+    forgot_password: 'Forgot password',
+    reset_password: 'Reset password',
+    username: 'Username',
+    password: 'Password',
+    password_repeat: 'Repeat password',
     apply_url: () => 'Apply URL',
     apply_email: () => 'Apply e-mail',
     apply_post: () => 'No online application/postal application',

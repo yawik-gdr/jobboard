@@ -32,6 +32,7 @@ export default
     register: () => 'S\'inscrire',
     send: () => 'Envoyer',
     publish: () => 'Publier',
+    wellcome: 'Bienvenue'
   },
   nav: {
     applications: () => 'Candidatures',
@@ -53,6 +54,11 @@ export default
     country: () => 'Pays',
     countries: () => 'des pays',
     location: () => 'Lieu',
+    forgot_password: 'Mot de passe oublié',
+    reset_password: 'Réinitialiser le mot de passe',
+    username: 'Nom d\'utilisateur',
+    password: 'Mot de passe',
+    password_repeat: 'Répéter le mot de passe',
     apply_url: () => 'Lien de candidature',
     apply_email: () => 'Email de candidature',
     apply_post: () => 'pas de candidatures en ligne/postales',
