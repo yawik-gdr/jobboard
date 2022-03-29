@@ -10,7 +10,10 @@
             <q-card-section>
               <q-item>
                 <q-item-section avatar>
-                  <q-img fit="contain" :src="jobHost + val.attributes.logo.formats.thumbnail.url" height="50px"
+                  <q-img v-if="val.attributes.logo"
+                         fit="contain"
+                         :src="jobHost + val.attributes.logo.formats.thumbnail.url"
+                         height="50px"
                          width="100px"
                   />
                   <my-date :date="val.attributes.publishedAt" />

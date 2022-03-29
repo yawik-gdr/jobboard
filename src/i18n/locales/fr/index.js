@@ -13,7 +13,6 @@ export default
   imprint: () => 'Imprint',
   privacy: () => 'Protection des données',
   terms: () => 'GTCs',
-  date: () => 'Date',
   location: () => 'Lieu',
   company: () => 'Entreprise',
   recruiter: () => 'Recruteur',

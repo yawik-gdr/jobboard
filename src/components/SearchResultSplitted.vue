@@ -45,6 +45,7 @@
 
 <script>
 import Date from 'src/components/Date.vue';
+import convertToSlug from 'src/lib/utils.js';
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
@@ -211,18 +212,12 @@ export default defineComponent({
             this.loading = false;
           });
         },
-        convertToSlug(title)
-        {
-          return title.toLowerCase()
-            .replace(/[^\w ]+/g, '')
-            .replace(/ +/g, '-');
-        },
         emitData(job, index)
         {
           if (job != null)
           {
             const id = job.id;
-            const title = this.convertToSlug(job.title);
+            const title = convertToSlug(job.title);
             if (typeof window !== 'undefined')
             {
               window.history.pushState('', 'Title', `/jobs/${id}/${title}`);

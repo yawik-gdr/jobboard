@@ -113,45 +113,35 @@ export default defineComponent({
     }
   },
   computed:
+  {
+    apply()
+    {
+      let link = '';
+
+      if ('keyValuePortalApplyUrl314' in this.selectedJob)
       {
-        apply()
-        {
-          /* const portalId = [
-             314, // it-jobs.net
-             449, // it-jobs.net (60T)
-             1143, // it-jobs.net (Dauer/360 Tage)
-             1599, // it-jobs.net
-           ];
-           console.log('EVENT:', event);
-           return portalId;*/
-          let link = '';
-
-          console.log('JOB', JSON.stringify(this.selectedJob));
-
-          if ('keyValuePortalApplyUrl314' in this.selectedJob)
-          {
-            link = this.selectedJob.keyValuePortalApplyUrl314;
-          }
-          else if ('keyValuePortalApplyUrl449' in this.selectedJob)
-          {
-            link = this.selectedJob.keyValuePortalApplyUrl449;
-          }
-          else if ('keyValuePortalApplyUrl1143' in this.selectedJob)
-          {
-            link = this.selectedJob.keyValuePortalApplyUrl1143;
-          }
-          else if ('keyValuePortalApplyUrl1599' in this.selectedJob)
-          {
-            link = this.selectedJob.keyValuePortalApplyUrl1599;
-          }
-          else if ('applicationEmail' in this.selectedJob)
-          {
-            link = 'mailto:' + this.selectedJob.applicationEmail;
-          }
-          console.log('Link', link);
-          return link;
-        }
-      },
+        link = this.selectedJob.keyValuePortalApplyUrl314;
+      }
+      else if ('keyValuePortalApplyUrl449' in this.selectedJob)
+      {
+        link = this.selectedJob.keyValuePortalApplyUrl449;
+      }
+      else if ('keyValuePortalApplyUrl1143' in this.selectedJob)
+      {
+        link = this.selectedJob.keyValuePortalApplyUrl1143;
+      }
+      else if ('keyValuePortalApplyUrl1599' in this.selectedJob)
+      {
+        link = this.selectedJob.keyValuePortalApplyUrl1599;
+      }
+      else if ('applicationEmail' in this.selectedJob)
+      {
+        link = 'mailto:' + this.selectedJob.applicationEmail;
+      }
+      console.log('Link', link);
+      return link;
+    }
+  },
   watch: {
     selectedJob(newVal, oldVal)
     {
@@ -170,18 +160,18 @@ export default defineComponent({
 </style>
 
 <i18n>
-  {
+{
   "en": {
-  "search-placeholder": "Job title, Company or Location",
-  "job-title": "Job title",
-  "address": "Address",
-  "apply": "Apply"
+    "search-placeholder": "Job title, Company or Location",
+    "job-title": "Job title",
+    "address": "Address",
+    "apply": "Apply"
   },
   "de": {
-  "search-placeholder": "Anzeigentitel, Firma oder Ort",
-  "job-title": "Job title",
-  "address": "Address",
-  "apply": "Bewerben"
+    "search-placeholder": "Anzeigentitel, Firma oder Ort",
+    "job-title": "Job title",
+    "address": "Address",
+    "apply": "Bewerben"
   }
-  }
+}
 </i18n>
