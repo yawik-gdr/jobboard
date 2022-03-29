@@ -54,7 +54,10 @@ module.exports = configure(function(ctx)
       'roboto-font', // optional, you are not bound to it
       'material-icons', // optional, you are not bound to it
     ],
-
+    htmlVariables:
+    {
+      googleMaps: variables.YAWIK_GOOGLE_MAPS,
+    },
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       publicPath: variables.ROUTER_BASE || '/',

@@ -45,3 +45,5 @@ Values in `.env.local` overwrite those in `.env`
 | YAWIK_URL_OPERATOR           | Links to the opeartor of the form          |
 | YAWIK_URL_IMPRINT            | Link to the Imprint of the operator        |
 | YAWIK_URL_PRIVACY            | Link to the Privacy notes                  |
+| YAWIK_GOOGLE_MAPS            | Google Maps Key
+|
