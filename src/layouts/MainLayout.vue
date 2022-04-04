@@ -6,9 +6,9 @@
 
     <q-footer bordered class="bg-white text-primary">
       <q-tabs no-caps active-color="primary" indicator-color="transparent" class="text-grey">
-        <q-tab name="imprint" :label="$t('imprint')" />
-        <q-tab name="privary" :label="$t('privacy')" />
-        <q-tab name="terms" :label="$t('terms')" />
+        <q-route-tab name="imprint" :label="$t('imprint')" to="/info/de/impressum" />
+        <q-route-tab name="privary" :label="$t('privacy')" to="/info/de/privacy" />
+        <q-route-tab name="terms" :label="$t('terms')" to="/info/de/terms" />
         <div>{{ $t('Quasar v') + $q.version }}</div>
       </q-tabs>
     </q-footer>
