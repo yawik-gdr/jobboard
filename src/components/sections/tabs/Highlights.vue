@@ -80,11 +80,11 @@ export default defineComponent({
   methods: {
     route(id, title)
     {
+      console.log(id, title);
       this.$router.push({
-        name: 'jobs',
+        name: 'internal-job',
         params: {
-          id: id,
-          title: title
+          id: id
         }
       });
     },

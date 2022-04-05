@@ -8,6 +8,11 @@ const routes = [
         component: () => import('pages/Index.vue')
       },
       {
+        path: 'job/:id',
+        name: 'internal-job',
+        component: () => import('pages/InternalJob.vue'),
+      },
+      {
         path: 'jobs',
         name: 'jobs',
         component: () => import('pages/Jobs.vue'),

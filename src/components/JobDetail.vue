@@ -14,13 +14,10 @@
 
             <q-item-section>
               <q-item-label align="left">
-                {{ selectedJob.title }}
+                {{ selectedJob.jobTitle }}
               </q-item-label>
               <q-item-label align="left" caption>
-                {{ selectedJob.companyName }}
-              </q-item-label>
-              <q-item-label caption>
-                {{ selectedJob.regionText }}
+                {{ selectedJob.organization }}
               </q-item-label>
             </q-item-section>
             <q-item-section side>
