@@ -19,6 +19,9 @@
               <q-item-label align="left" caption>
                 {{ selectedJob.organization }}
               </q-item-label>
+              <q-item-label caption>
+                {{ selectedJob.formattedAddress }}
+              </q-item-label>
             </q-item-section>
             <q-item-section side>
               <q-btn
@@ -33,13 +36,15 @@
               </q-btn>
             </q-item-section>
           </q-item>
-          <q-card-section class="col-grow overflow-hidden row">
+          <!--
+ <q-card-section class="col-grow overflow-hidden row">
             <q-page class="row col-grow">
               <iframe class="col-grow rounded-borders full-height"
                       :src="jobDetailUrl + 'job/1/' + selectedJob.id + '.html'"
               />
             </q-page>
           </q-card-section>
+-->
         </q-card>
       </div>
     </div>

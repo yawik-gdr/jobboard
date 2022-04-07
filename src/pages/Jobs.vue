@@ -9,7 +9,8 @@
       </template>
 
       <template #after>
-        <job-detail-frame :selected-job="selectedJob" />
+        <job-detail v-if="isInternalSelected" :selected-job="selectedJob" />
+        <job-detail-frame v-else :selected-job="selectedJob" />
       </template>
     </q-splitter>
     <!-- content -->
@@ -19,6 +20,7 @@
 <script>
 import searchresult from 'src/components/SearchResultSplitted.vue';
 import JobDetailFrame from 'src/components/JobDetailFrame.vue';
+import JobDetail from 'src/components/JobDetail.vue';
 import { ref } from 'vue';
 
 export default {
@@ -32,19 +34,27 @@ export default {
   components:
       {
         searchresult,
-        JobDetailFrame
+        JobDetailFrame,
+        JobDetail,
       },
   data()
   {
     return {
       selectedJob: null,
+      isInternalSelected: false
     };
+  },
+  mounted()
+  {
+
   },
   methods:
       {
         getEmittedData(value)
         {
           this.selectedJob = value.job;
+          this.isInternalSelected = value.internal;
+          console.log(value);
         }
       },
 

@@ -82,9 +82,11 @@ export default defineComponent({
     {
       console.log(id, title);
       this.$router.push({
-        name: 'internal-job',
+        name: 'selected-job',
         params: {
-          id: id
+          id: id,
+          title: title,
+          internal: true
         }
       });
     },

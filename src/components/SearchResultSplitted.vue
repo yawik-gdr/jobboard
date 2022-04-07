@@ -2,6 +2,36 @@
   <q-scroll-area :style="'height: ' + $q.screen.height + 'px;'">
     <q-infinite-scroll :offset="250" @load="getJobs">
       <div ref="scrollTargetRef" class="row">
+        <span v-for="(val, index) in internalJobs" :key="index+'_'+val.id" class="col-12">
+          <q-card class="jobs fit">
+            <q-card-section>
+              <q-item
+                clickable
+                @click="emitData(val.attributes, index,true)"
+              >
+                <q-item-section avatar>
+                  <q-img fit="contain" :src="jobDetailUrl + 'logo/' + val.companyId" height="50px"
+                         width="100px"
+                  >
+                    <template #loading>
+                      <q-spinner-orbit size="xs" color="grey" />
+                    </template>
+                  </q-img>
+                  <date :date="val.datePublishStart" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label align="left">
+                    {{ val.attributes.jobTitle }}
+                  </q-item-label>
+                  <q-item-label align="left" caption>
+                    {{ val.attributes.organization }}
+                  </q-item-label>
+                  <q-item-label align="left" caption>{{ val.attributes.formattedAddress }}</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-card-section>
+          </q-card>
+        </span>
         <span v-for="(val, index) in rows" :key="val.id" class="col-12">
           <q-card class="jobs fit">
             <q-card-section>
@@ -56,23 +86,23 @@ export default defineComponent({
       },
   props: {
     query:
-      {
-        type: String,
-        required: false,
-        default: '*'
-      },
+        {
+          type: String,
+          required: false,
+          default: '*'
+        },
     distance:
-      {
-        type: Object,
-        required: false,
-        default: null
-      },
+        {
+          type: Object,
+          required: false,
+          default: null
+        },
     coordinates:
-      {
-        type: Object,
-        required: false,
-        default: null
-      },
+        {
+          type: Object,
+          required: false,
+          default: null
+        },
   },
   emits: ['click'],
   setup()
@@ -80,6 +110,7 @@ export default defineComponent({
     const scrollTargetRef = ref(null);
     return {
       jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
+      internalJobsUrl: `${process.env.YAWIK_SEARCH_URL}/api/jobs`,
       scrollTargetRef,
       jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`,
       loading: false,
@@ -91,7 +122,16 @@ export default defineComponent({
   {
     return {
       rows: [],
-      selectedIndex: null
+      selectedIndex: null,
+      pagination: {
+        sortBy: 'date',
+        descending: false,
+        page: 1,
+        rowsPerPage: 10,
+        rowsNumber: 10
+      },
+      internalJobs: [],
+      isInternal: false,
     };
   },
   watch: {
@@ -107,6 +147,12 @@ export default defineComponent({
     {
       this.resetAttrib();
     }
+  },
+  mounted()
+  {
+    this.isInternal = Boolean(this.$route.params.internal);
+    console.log(this.isInternal, typeof this.isInternal);
+    this.getInternalJobs();
   },
   methods:
       {
@@ -165,8 +211,7 @@ export default defineComponent({
                 fq: `companyTag:"${this.$route.params.company}"`
               };
               break;
-            case 'jobs-near-by':
-            {
+            case 'jobs-near-by': {
               const lat = this.coordinates.lat;
               const lng = this.coordinates.lng;
               const dist = this.distance.id || 20;
@@ -195,7 +240,10 @@ export default defineComponent({
             }
             else
             {
-              this.emitData(this.rows[0], 0);
+              if (!this.isInternal)
+              {
+                this.emitData(this.rows[0], 0);
+              }
             }
             this.start = index * this.rowsPerPage;
             const totalRecords = response.data.response.numFound;
@@ -212,18 +260,41 @@ export default defineComponent({
             this.loading = false;
           });
         },
-        emitData(job, index)
+        getInternalJobs(pagination = { pagination: this.pagination })
+        {
+          this.$axios.get(this.internalJobsUrl, {
+            params: {
+              'pagination[page]': pagination.pagination.page,
+              'pagination[pageSize]': pagination.pagination.rowsPerPage,
+              populate: 'html,logo',
+              sort: 'publishedAt:desc'
+            }
+          }
+          ).then(response =>
+          {
+            this.internalJobs = response.data.data;
+          }).finally(() =>
+          {
+          });
+        },
+        emitData(job, index, internal = false)
         {
           if (job != null)
           {
             const id = job.id;
-            const title = convertToSlug(job.title);
-            if (typeof window !== 'undefined')
+            const title = internal ? convertToSlug(job.jobTitle) : convertToSlug(job.title);
+            if (typeof window !== 'undefined' && !this.isInternal)
             {
               window.history.pushState('', 'Title', `/jobs/${id}/${title}`);
             }
-            this.selectedIndex = index;
-            this.$emit('click', { job: job });
+            if (!internal)
+            {
+              this.selectedIndex = index;
+            }
+            this.$emit('click', {
+              job: job,
+              internal: internal
+            });
           }
         }
       }
@@ -244,12 +315,12 @@ export default defineComponent({
 </style>
 
 <i18n>
-{
+  {
   "en": {
   "search-placeholder": "Job title, Company or Location",
   },
   "de": {
   "search-placeholder": "Anzeigentitel, Firma oder Ort",
   }
-}
+  }
 </i18n>
