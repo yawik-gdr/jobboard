@@ -21,6 +21,7 @@
                       <q-spinner-orbit size="xs" color="grey" />
                     </template>
                   </q-img>
+                  <q-icon v-else size="xl" name="domain" color="secondary" style="height: 50px; width: 100px;" />
                   <date :date="val.datePublishStart" />
                 </q-item-section>
                 <q-item-section>
