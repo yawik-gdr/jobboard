@@ -10,8 +10,12 @@
                 @click="emitData(val.attributes, index,true)"
               >
                 <q-item-section avatar>
-                  <q-img fit="contain" :src="jobDetailUrl + 'logo/' + val.companyId" height="50px"
-                         width="100px"
+                  <q-img
+                    v-if="val.attributes.logo"
+                    fit="contain"
+                    :src="jobDetailUrlInternal + val.attributes.logo.url"
+                    height="50px"
+                    width="100px"
                   >
                     <template #loading>
                       <q-spinner-orbit size="xs" color="grey" />
@@ -41,8 +45,11 @@
                 @click="emitData(val, index)"
               >
                 <q-item-section avatar>
-                  <q-img fit="contain" :src="jobDetailUrl + 'logo/' + val.companyId" height="50px"
-                         width="100px"
+                  <q-img
+                    fit="contain"
+                    :src="jobDetailUrl + 'logo/' + val.companyId"
+                    height="50px"
+                    width="100px"
                   >
                     <template #loading>
                       <q-spinner-orbit size="xs" color="grey" />
@@ -111,6 +118,7 @@ export default defineComponent({
     return {
       jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
       internalJobsUrl: `${process.env.YAWIK_SEARCH_URL}/api/jobs`,
+      jobDetailUrlInternal: `${process.env.YAWIK_JOB_URL}`,
       scrollTargetRef,
       jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`,
       loading: false,

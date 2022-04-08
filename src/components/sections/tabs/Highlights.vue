@@ -15,7 +15,11 @@
                          :src="jobHost + val.attributes.logo.formats.thumbnail.url"
                          height="50px"
                          width="100px"
-                  />
+                  >
+                    <template #loading>
+                      <q-spinner-orbit size="xs" color="grey" />
+                    </template>
+                  </q-img>
                   <my-date :date="val.attributes.publishedAt" />
                 </q-item-section>
                 <q-item-section>
