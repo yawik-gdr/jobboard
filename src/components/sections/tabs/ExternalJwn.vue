@@ -2,7 +2,7 @@
   <span v-for="(val, i) in rows" :key="i" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
     <q-card
       class="jobs fit cursor-pointer"
-      @click="route(val.doclist.docs[0].id, val.doclist.docs[0].title)"
+      @click="route(val.doclist.docs[0].id, convertToSlug(val.doclist.docs[0].title))"
     >
       <q-card-section>
         <div
@@ -71,6 +71,7 @@
 
 import MyDate from 'src/components/Date.vue';
 import MaxLength from 'src/components/MaxLength.vue';
+import convertToSlug from 'src/lib/utils.js';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -95,6 +96,13 @@ export default defineComponent({
       jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
       jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`
     };
+  },
+  computed:
+  {
+    convertToSlug()
+    {
+      return convertToSlug;
+    }
   },
   mounted()
   {

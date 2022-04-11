@@ -7,7 +7,7 @@
             <q-card-section>
               <q-item
                 clickable
-                @click="emitData(val.attributes, index,true)"
+                @click="emitData(val.attributes, index, true)"
               >
                 <q-item-section avatar>
                   <q-img
@@ -160,7 +160,6 @@ export default defineComponent({
   mounted()
   {
     this.isInternal = Boolean(this.$route.params.internal);
-    console.log(this.isInternal, typeof this.isInternal);
     this.getInternalJobs();
   },
   methods:
@@ -296,13 +295,17 @@ export default defineComponent({
             {
               window.history.pushState('', 'Title', `/jobs/${id}/${title}`);
             }
-            if (!internal)
-            {
-              this.selectedIndex = index;
-            }
             this.$emit('click', {
               job: job,
               internal: internal
+            });
+            this.$router.push({
+              name: 'selected-job',
+              params: {
+                id: id,
+                title: title,
+                internal: internal
+              }
             });
           }
         }
