@@ -1,0 +1,153 @@
+<template>
+  <component is="script" type="application/ld+json">
+    {{ $helpers.jsonLd(job) }}
+  </component>
+  <!-- <script v-html="$helpers.jsonLd(job)" type="application/ld+json"/> -->
+</template>
+
+<script>
+export default {
+  name: 'JobAd',
+  data()
+  {
+    return {
+      job: {
+        id: 2,
+        organization: 'CROSS Solution',
+        dateDeleted: null,
+        location: {
+          streetAdress: '',
+          addressLocality: '',
+          addressRegion: '',
+          postalCode: '',
+          addressCountry: ''
+        },
+        intro: 'Open Source Firma. Ohne wenn und aber. Wir lieben es gemeinsam Dinge zu schaffen.<div><br></div>',
+        tasks: '- Backend Development&nbsp;<div>- ci/cd</div>',
+        offer: '- fun@work',
+        jobTitle: 'Software Developer Strapi (m/w/d)',
+        reference: '',
+        applyEmail: 'bleek@cross-solution.de',
+        applyUrl: '',
+        formattedAddress: 'Frankfurt am Main, Deutschland',
+        applyPost: false,
+        introLabel: 'Unternehmensbeschreibung',
+        taskLabel: 'Aufgaben',
+        profileLabel: 'Ihre Voraussetzungen',
+        offerLabel: 'Ihre Vorteile',
+        contactInfoLabel: '',
+        contactInfo: 'Sende uns einen Merge Request',
+        meta: {
+          publishImmediately: true,
+          publishStart: '',
+          publishDays: 30,
+          acceptTerms: false,
+          channels: [
+            'Homepage',
+            'Yawik',
+            'Google'
+          ],
+          workKind: [
+            'freelance'
+          ],
+          workDuration: [
+            'parttime'
+          ],
+          partTimePercentage: 50,
+          shiftWorkAmount: 2,
+          remoteWork: true,
+          remoteWorkPercentage: 50,
+          salary: {
+            label: '40.000€ - 60.000€',
+            value: '40|60'
+          },
+          salaryVisibility: true,
+          formattedAddress: ''
+        },
+        createdAt: '2022-02-04T10:39:50.221Z',
+        updatedAt: '2022-02-04T10:55:55.589Z',
+        publishedAt: '2022-02-04T10:55:55.584Z',
+        profile: null,
+        sitemap_exclude: null,
+        html: null,
+        logo: {
+          id: 1,
+          name: 'blob',
+          alternativeText: null,
+          caption: null,
+          width: 1240,
+          height: 1240,
+          formats: {
+            thumbnail: {
+              name: 'thumbnail_blob',
+              hash: 'thumbnail_blob_77619b59d3',
+              ext: '',
+              mime: 'image/png',
+              width: 156,
+              height: 156,
+              size: 6.07,
+              path: null,
+              url: '/uploads/thumbnail_blob_77619b59d3'
+            },
+            large: {
+              name: 'large_blob',
+              hash: 'large_blob_77619b59d3',
+              ext: '',
+              mime: 'image/png',
+              width: 1000,
+              height: 1000,
+              size: 40.36,
+              path: null,
+              url: '/uploads/large_blob_77619b59d3'
+            },
+            medium: {
+              name: 'medium_blob',
+              hash: 'medium_blob_77619b59d3',
+              ext: '',
+              mime: 'image/png',
+              width: 750,
+              height: 750,
+              size: 27.55,
+              path: null,
+              url: '/uploads/medium_blob_77619b59d3'
+            },
+            small: {
+              name: 'small_blob',
+              hash: 'small_blob_77619b59d3',
+              ext: '',
+              mime: 'image/png',
+              width: 500,
+              height: 500,
+              size: 16.57,
+              path: null,
+              url: '/uploads/small_blob_77619b59d3'
+            },
+            xsmall: {
+              name: 'xsmall_blob',
+              hash: 'xsmall_blob_77619b59d3',
+              ext: '',
+              mime: 'image/png',
+              width: 64,
+              height: 64,
+              size: 4.14,
+              path: null,
+              url: '/uploads/xsmall_blob_77619b59d3'
+            }
+          },
+          hash: 'blob_77619b59d3',
+          ext: '',
+          mime: 'image/png',
+          size: 17.18,
+          url: '/uploads/blob_77619b59d3',
+          previewUrl: null,
+          provider: 'local',
+          provider_metadata: null,
+          createdAt: '2022-02-04T09:27:26.841Z',
+          updatedAt: '2022-02-04T09:27:26.841Z',
+          sitemap_exclude: null
+        }
+      }
+    };
+  }
+};
+</script>
