@@ -75,6 +75,9 @@
         </q-card>
       </div>
     </div>
+    <component :is="script" type="application/ld+json">
+      {{ $helpers.jsonLd(selectedJob) }}
+    </component>
   </div>
 </template>
 
