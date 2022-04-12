@@ -1,11 +1,11 @@
 <template>
-  <div v-if="selectedJob!=null" class="row">
-    <div class="col-12">
+  <div v-if="selectedJob!=null" class="row justify-center">
+    <div class="col-md-10 q-mt-md">
       <div>
-        <q-card bordered>
+        <q-card>
           <q-item>
             <q-item-section avatar>
-              <q-img fit="contain" :src="jobDetailUrl + 'logo/' + selectedJob.companyId" height="100px" width="150px">
+              <q-img v-if="selectedJob.logo" fit="contain" :src="jobDetailUrl + selectedJob.logo.url" height="100px" width="150px">
                 <template #loading>
                   <q-spinner-orbit size="xs" color="grey" />
                 </template>
@@ -14,13 +14,13 @@
 
             <q-item-section>
               <q-item-label align="left">
-                {{ selectedJob.title }}
+                {{ selectedJob.jobTitle }}
               </q-item-label>
               <q-item-label align="left" caption>
-                {{ selectedJob.companyName }}
+                {{ selectedJob.organization }}
               </q-item-label>
               <q-item-label caption>
-                {{ selectedJob.regionText }}
+                {{ selectedJob.formattedAddress }}
               </q-item-label>
             </q-item-section>
             <q-item-section side>
@@ -36,13 +36,42 @@
               </q-btn>
             </q-item-section>
           </q-item>
-          <q-card-section class="col-grow overflow-hidden row">
-            <q-page class="row col-grow">
-              <iframe class="col-grow rounded-borders full-height"
-                      :src="jobDetailUrl + 'job/1/' + selectedJob.id + '.html'"
-              />
-            </q-page>
-          </q-card-section>
+          <q-item>
+            <q-item-section>
+              <q-item-label>{{ selectedJob.introLabel }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.intro" />
+              <h2>{{ selectedJob.jobTitle }}</h2>
+            </q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>
+              <q-item-label>{{ selectedJob.taskLabel }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.tasks" />
+            </q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>
+              <q-item-label>{{ selectedJob.profileLabel }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.profile" />
+            </q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>
+              <q-item-label>{{ selectedJob.offerLabel }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.offer" />
+            </q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>
+              <q-item-label>{{ selectedJob.contactInfoLabel }}</q-item-label>
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <q-item-label caption v-html="selectedJob.contactInfo" />
+            </q-item-section>
+          </q-item>
         </q-card>
       </div>
     </div>
@@ -99,7 +128,7 @@ export default defineComponent({
     }
 
     return {
-      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`,
+      jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
       pageTitle,
       pageDescription,
       pageKeywords

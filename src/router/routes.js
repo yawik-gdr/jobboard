@@ -8,6 +8,11 @@ const routes = [
         component: () => import('pages/Index.vue')
       },
       {
+        path: 'job/:id',
+        name: 'internal-job',
+        component: () => import('pages/InternalJob.vue'),
+      },
+      {
         path: 'jobs',
         name: 'jobs',
         component: () => import('pages/Jobs.vue'),
@@ -18,7 +23,7 @@ const routes = [
         component: () => import('pages/Jobs.vue'),
       },
       {
-        path: 'jobs/:id/:title',
+        path: 'jobs/:id/:title/:internal?',
         name: 'selected-job',
         props: true,
         component: () => import('pages/Jobs.vue'),

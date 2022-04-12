@@ -1,5 +1,5 @@
 <template>
-  <component is="script" type="application/ld+json">
+  <component :is="script" type="application/ld+json">
     {{ $helpers.jsonLd(job) }}
   </component>
   <!-- <script v-html="$helpers.jsonLd(job)" type="application/ld+json"/> -->

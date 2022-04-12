@@ -46,7 +46,7 @@
     </q-btn>
     <q-separator dark vertical />
     <q-space />
-    <login />
+    <login class="q-mr-sm" />
     <switch-language />
   </q-toolbar>
 </template>
