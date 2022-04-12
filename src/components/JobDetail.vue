@@ -34,6 +34,7 @@
               >
                 {{ $t('apply') }}
               </q-btn>
+              {{ a }}
             </q-item-section>
           </q-item>
           <q-item>
@@ -145,30 +146,8 @@ export default defineComponent({
   {
     apply()
     {
-      let link = '';
-
-      if ('keyValuePortalApplyUrl314' in this.selectedJob)
-      {
-        link = this.selectedJob.keyValuePortalApplyUrl314;
-      }
-      else if ('keyValuePortalApplyUrl449' in this.selectedJob)
-      {
-        link = this.selectedJob.keyValuePortalApplyUrl449;
-      }
-      else if ('keyValuePortalApplyUrl1143' in this.selectedJob)
-      {
-        link = this.selectedJob.keyValuePortalApplyUrl1143;
-      }
-      else if ('keyValuePortalApplyUrl1599' in this.selectedJob)
-      {
-        link = this.selectedJob.keyValuePortalApplyUrl1599;
-      }
-      else if ('applicationEmail' in this.selectedJob)
-      {
-        link = 'mailto:' + this.selectedJob.applicationEmail;
-      }
-      console.log('Link', link);
-      return link;
+      const id = this.$route.params.id;
+      return process.env.YAWIK_APPLY_URL + '/?job=' + id;
     }
   },
   watch: {
@@ -192,13 +171,11 @@ export default defineComponent({
 {
   "en": {
     "search-placeholder": "Job title, Company or Location",
-    "job-title": "Job title",
     "address": "Address",
     "apply": "Apply"
   },
   "de": {
     "search-placeholder": "Anzeigentitel, Firma oder Ort",
-    "job-title": "Job title",
     "address": "Address",
     "apply": "Bewerben"
   }
