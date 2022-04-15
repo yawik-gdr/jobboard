@@ -58,6 +58,12 @@ const routes = [
         props: true,
         component: () => import('pages/news/News.vue'),
       },
+      {
+        path: 'test/job-ad',
+        name: 'job-ad',
+        props: true,
+        component: () => import('pages/JobAd.vue'),
+      },
 
     ]
   },
