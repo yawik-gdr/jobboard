@@ -7,7 +7,7 @@
             <q-card-section>
               <q-item
                 clickable
-                @click="emitData(val.attributes, index, true)"
+                @click="emitData(val.attributes, index, '1')"
               >
                 <q-item-section avatar>
                   <q-img
@@ -157,9 +157,24 @@ export default defineComponent({
       this.resetAttrib();
     }
   },
+  beforeMount()
+  {
+    const internal = this.$route.params.internal;
+    console.log('internal ', internal);
+    if (internal === undefined || internal === '')
+    {
+      console.log('internal in s ', internal);
+      this.isInternal = true;
+    }
+    else
+    {
+      console.log('not undefined');
+      this.isInternal = this.$route.params.internal === '1';
+    }
+    console.log(this.isInternal);
+  },
   mounted()
   {
-    this.isInternal = Boolean(this.$route.params.internal);
     this.getInternalJobs();
   },
   methods:
@@ -281,17 +296,30 @@ export default defineComponent({
           ).then(response =>
           {
             this.internalJobs = response.data.data;
+            if (this.isInternal)
+            {
+              const selectedId = parseInt(this.$rosute.params.id);
+              const i = this.internalJobs.findIndex(({ id }) => id === selectedId);
+              if (i !== -1)
+              {
+                this.emitData(this.internalJobs[i].attributes, i, '1');
+              }
+              else
+              {
+                this.emitData(this.internalJobs[0].attributes, 0, '1');
+              }
+            }
           }).finally(() =>
           {
           });
         },
-        emitData(job, index, internal = false)
+        emitData(job, index, internal = '0')
         {
           if (job != null)
           {
             const id = job.id;
-            const title = internal ? convertToSlug(job.jobTitle) : convertToSlug(job.title);
-            if (typeof window !== 'undefined' && !this.isInternal)
+            const title = internal === '1' ? convertToSlug(job.jobTitle) : convertToSlug(job.title);
+            if (typeof window !== 'undefined')
             {
               window.history.pushState('', 'Title', `/jobs/${id}/${title}`);
             }

@@ -8,7 +8,7 @@
         <span v-for="val in rows" :key="val.id" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
           <q-card
             class="fit cursor-pointer"
-            @click="route(val.id, convertToSlug(val.attributes.jobTitle), true)"
+            @click="route(val.id, convertToSlug(val.attributes.jobTitle), 1)"
           >
             <q-card-section>
               <q-item>

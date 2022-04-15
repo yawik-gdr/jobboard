@@ -111,11 +111,13 @@ export default defineComponent({
   methods: {
     route(id, title)
     {
+      console.log(id, title);
       this.$router.push({
         name: 'selected-job',
         params: {
           id: id,
-          title: title
+          title: title,
+          internal: 0
         }
       });
     },
