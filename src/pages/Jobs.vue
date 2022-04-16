@@ -38,7 +38,7 @@ export default {
         getEmittedData(value)
         {
           this.selectedJob = value.job;
-          this.isInternalSelected = value.internal;
+          this.isInternalSelected = value.internal === '1';
           console.log(value);
         }
       },

@@ -298,7 +298,7 @@ export default defineComponent({
             this.internalJobs = response.data.data;
             if (this.isInternal)
             {
-              const selectedId = parseInt(this.$rosute.params.id);
+              const selectedId = parseInt(this.$route.params.id);
               const i = this.internalJobs.findIndex(({ id }) => id === selectedId);
               if (i !== -1)
               {
