@@ -84,7 +84,13 @@
 import { useMeta } from 'quasar';
 import { defineComponent, ref } from 'vue';
 
+const ld = {
+  '@context': 'https://schema.org/',
+  '@type': 'JobPosting'
+};
+
 export default defineComponent({
+
   name: 'JobDetail',
   setup()
   {
@@ -166,14 +172,15 @@ export default defineComponent({
   watch: {
     selectedJob(newVal, oldVal)
     {
-      const ld = {
-        '@context': 'https://schema.org/',
-        '@type': 'JobPosting'
-      };
       //console.log(ld);
       this.pageTitle(newVal.jobTitle);
       this.pageJob(`${JSON.stringify(ld)}`);
     }
+  },
+  mounted()
+  {
+    this.pageTitle(this.selectedJob.jobTitle);
+    this.pageJob(`${JSON.stringify(ld)}`);
   },
 });
 </script>
