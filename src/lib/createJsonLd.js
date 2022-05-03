@@ -16,11 +16,11 @@ function createJsonLd(job)
   o.title = job.jobTitle;
   o.description = '<p>' + job.intro + '</p><p><b>' + job.taskLabel + '</b><br>' + job.tasks + '</p><p><br><b>' + job.profileLabel + '</b><br>' + job.profile + '</p><p><br><b>' + job.offerLabel + '</b><br>' + job.offer + '</p><p><b>' + job.contactInfoLabel + '</b><br>' + job.contactInfo + '</p>';
   o.identifier.name = 'yawik';
-  o.identifier.value = job.org?.id;
+  o.identifier.value = job.id;
   o.datePosted = today.toISOString().slice(0, 10);
   o.validThrough = expires.toISOString().slice(0, 10);
-  o.hiringOrganization.name = job.org?.name;
-  o.hiringOrganization.sameAs = job.org?.name;
+  o.hiringOrganization.name = job.organization;
+  o.hiringOrganization.sameAs = job.organization;
   o.hiringOrganization.logo = 'https://api.yawik.org' + job.logo?.url;
   o.jobLocation.address.addressLocality = job.location.addressLocality;
   o.jobLocation.address.streetAddress = job.location.streetAddress;
