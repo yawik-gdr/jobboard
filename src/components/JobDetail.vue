@@ -5,7 +5,11 @@
         <q-card>
           <q-item>
             <q-item-section avatar>
-              <q-img v-if="selectedJob.logo" fit="contain" :src="jobDetailUrl + selectedJob.logo.url" height="100px" width="150px">
+              <q-img v-if="selectedJob.logo"
+                     fit="contain"
+                     :src="jobDetailUrl + selectedJob.logo.url"
+                     height="100px" width="150px"
+              >
                 <template #loading>
                   <q-spinner-orbit size="xs" color="grey" />
                 </template>
@@ -80,13 +84,9 @@
 
 <script>
 
+import createJsondLd from 'src/lib/createJsonLd.js';
 import { useMeta } from 'quasar';
 import { defineComponent, ref } from 'vue';
-
-const ld = {
-  '@context': 'https://schema.org/',
-  '@type': 'JobPosting'
-};
 
 export default defineComponent({
 
@@ -171,15 +171,16 @@ export default defineComponent({
   watch: {
     selectedJob(newVal, oldVal)
     {
-      //console.log(ld);
+      const json = createJsondLd(newVal);
+      console.log('JSON', json);
       this.pageTitle(newVal.jobTitle);
-      this.pageJob(`${JSON.stringify(ld)}`);
+      this.pageJob(`${createJsondLd(this.selectedJob)}`);
     }
   },
   mounted()
   {
     this.pageTitle(this.selectedJob.jobTitle);
-    this.pageJob(`${JSON.stringify(ld)}`);
+    this.pageJob(`${createJsondLd(this.selectedJob)}`);
   },
 });
 </script>
