@@ -76,9 +76,6 @@
         </q-card>
       </div>
     </div>
-    <component :is="script" type="application/ld+json">
-      {{ $helpers.jsonLd(selectedJob) }}
-    </component>
   </div>
 </template>
 
@@ -91,9 +88,10 @@ export default defineComponent({
   name: 'JobDetail',
   setup()
   {
-    const title = ref('IT Jobs jobboard');
-    const description = ref('IT Jobs jobboard');
-    const keywords = ref('IT Jobs jobboard');
+    const title = ref('yawik jobboard');
+    const description = ref('yawik jobboard');
+    const keywords = ref('yawik jobboard');
+    const job = ref('');
 
     // NOTICE the parameter here is a function
     // Under the hood, it is converted to a Vue computed prop for reactivity
@@ -102,7 +100,7 @@ export default defineComponent({
       return {
         // whenever "title" from above changes, your meta will automatically update
         title: title.value,
-        titleTemplate: title => `${title} @ IT Jobs`,
+        titleTemplate: title => `${title} @ yawik`,
         meta: {
           description: {
             name: 'description',
@@ -112,7 +110,13 @@ export default defineComponent({
             name: 'keywords',
             content: keywords.value
           },
-        }
+        },
+        script: {
+          job: {
+            type: 'application/ld+json',
+            innerHTML: job.value
+          }
+        },
       };
     });
 
@@ -128,14 +132,20 @@ export default defineComponent({
 
     function pageDescription(val)
     {
-      title.value = val; // will automatically trigger a Meta update due to the binding
+      description.value = val; // will automatically trigger a Meta update due to the binding
+    }
+
+    function pageJob(val)
+    {
+      job.value = val; // will automatically trigger a Meta update due to the binding
     }
 
     return {
       jobDetailUrl: `${process.env.YAWIK_JOB_URL}`,
       pageTitle,
       pageDescription,
-      pageKeywords
+      pageKeywords,
+      pageJob
     };
   },
   props: {
@@ -156,8 +166,13 @@ export default defineComponent({
   watch: {
     selectedJob(newVal, oldVal)
     {
-      console.log('Val changed');
-      this.pageTitle(newVal.title);
+      const ld = {
+        '@context': 'https://schema.org/',
+        '@type': 'JobPosting'
+      };
+      //console.log(ld);
+      this.pageTitle(newVal.jobTitle);
+      this.pageJob(`${JSON.stringify(ld)}`);
     }
   },
 });
@@ -179,8 +194,14 @@ export default defineComponent({
   },
   "de": {
     "search-placeholder": "Anzeigentitel, Firma oder Ort",
-    "address": "Address",
+    "address": "Addresse",
     "apply": "Bewerben"
+  },
+  "fr": {
+    "search-placeholder": "Titre de l'annonce, entreprise ou lieu",
+    "address": "Adresse",
+    "apply": "Appliquer"
   }
+
 }
 </i18n>

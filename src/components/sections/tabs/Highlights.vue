@@ -15,7 +15,7 @@
                 <q-item-section avatar>
                   <q-img v-if="val.attributes.logo"
                          fit="contain"
-                         :src="jobHost + val.attributes.logo.formats.thumbnail.url"
+                         :src="jobHost + val.attributes.logo.url"
                          height="50px"
                          width="100px"
                   >
