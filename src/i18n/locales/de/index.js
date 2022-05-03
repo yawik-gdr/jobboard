@@ -32,6 +32,7 @@ export default
     save: () => 'Speichern',
     send: () => 'Senden',
     publish: () => 'Veröffentlichen',
+    apply: () => 'Bewerben'
   },
   nav:
   {

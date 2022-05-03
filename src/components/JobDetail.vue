@@ -32,9 +32,8 @@
                 :href="apply"
                 color="secondary"
               >
-                {{ $t('apply') }}
+                {{ $t('btn.apply') }}
               </q-btn>
-              {{ a }}
             </q-item-section>
           </q-item>
           <q-item>
@@ -191,24 +190,3 @@ export default defineComponent({
     background-color: $secondary;
   }
 </style>
-
-<i18n>
-{
-  "en": {
-    "search-placeholder": "Job title, Company or Location",
-    "address": "Address",
-    "apply": "Apply"
-  },
-  "de": {
-    "search-placeholder": "Anzeigentitel, Firma oder Ort",
-    "address": "Addresse",
-    "apply": "Bewerben"
-  },
-  "fr": {
-    "search-placeholder": "Titre de l'annonce, entreprise ou lieu",
-    "address": "Adresse",
-    "apply": "Appliquer"
-  }
-
-}
-</i18n>

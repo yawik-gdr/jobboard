@@ -32,7 +32,9 @@ export default
     register: () => 'Register',
     save: () => 'Save',
     send: () => 'Send',
-    publish: () => 'Publish'
+    publish: () => 'Publish',
+    apply: () => 'Apply'
+
   },
   nav:
   {

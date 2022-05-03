@@ -31,7 +31,8 @@ export default
     register: () => 'S\'inscrire',
     send: () => 'Envoyer',
     publish: () => 'Publier',
-    wellcome: 'Bienvenue'
+    wellcome: () => 'Bienvenue',
+    apply: () => 'Appliquer'
   },
   nav: {
     applications: () => 'Candidatures',
