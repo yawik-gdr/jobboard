@@ -140,7 +140,7 @@ module.exports = configure(function(ctx)
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
       config: {
-        sitename: 'jobboard',
+        sitename: 'yawik',
         logo: 'img:../../yawik_logo-mobile.svg'
       },
 
@@ -208,8 +208,8 @@ module.exports = configure(function(ctx)
       },
 
       manifest: {
-        name: `Yawik Jobboard`,
-        short_name: `Jobboard`,
+        name: `Yawik - Open Source meets Human Resources`,
+        short_name: `Yawik`,
         description: `Open Source Jobbord based on quasar`,
         display: 'standalone',
         orientation: 'portrait',
