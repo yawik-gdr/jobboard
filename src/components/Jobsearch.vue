@@ -243,7 +243,6 @@ export default {
       const queryStr = Object.keys(query)
         .map(k => `${k}=${encodeURIComponent(query[k])}`)
         .join('&');
-      console.error('queryStr', queryStr);
       this.$axios
         .get(this.host + '?' + queryStr)
         .then(response =>

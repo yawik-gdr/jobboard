@@ -171,7 +171,6 @@ export default defineComponent({
       console.log('not undefined');
       this.isInternal = this.$route.params.internal === '1';
     }
-    console.error(this.isInternal);
   },
   mounted()
   {
@@ -280,7 +279,6 @@ export default defineComponent({
               break;
             }
           }
-          console.error(selectedjob);
           if (selectedjob)
           {
             const selectedId = parseInt(this.$route.params.id);
@@ -332,7 +330,6 @@ export default defineComponent({
           }
           else
           {
-            console.error(params);
             this.loading = true;
             this.$axios.get(this.jobsUrl + '/api/solrGetJobs', {
               params: params
@@ -404,7 +401,6 @@ export default defineComponent({
           }
           ).then(response =>
           {
-            console.error(response);
             this.internalJobs = response.data.data;
             if (this.isInternal)
             {

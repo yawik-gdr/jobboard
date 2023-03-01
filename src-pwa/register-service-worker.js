@@ -35,7 +35,7 @@ register(process.env.SERVICE_WORKER_FILE, {
   updated (/* registration */) {
     Notify.create({
       color: 'negative',
-      icon: mdiCached,  
+      icon: mdiCached,
       message: 'Updated content is available. Please refresh the page.',
       timeout: 0,
       multiLine: true,
@@ -43,18 +43,18 @@ register(process.env.SERVICE_WORKER_FILE, {
       actions: [
         {
           label: 'Refresh',
-          color: 'yellow', 
-          handler: () => { 
+          color: 'yellow',
+          handler: () => {
             window.location.reload()
           }
-        }, 
-        {  
+        },
+        {
           label: 'Dismiss',
-          color: 'white',  
+          color: 'white',
           handler: () => {}
         }
-      ]  
-    })  
+      ]
+    })
   },
 
   offline()

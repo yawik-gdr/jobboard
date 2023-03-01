@@ -163,12 +163,8 @@ export default defineComponent({
 
         searchJobs()
         {
-          console.error('jobs-near-by', this.jobQuery);
-
           if (this.location !== null && this.location !== '')
           {
-            console.error('jobs-near-by', this.distance.id);
-
             this.$router.push({
               name: 'jobs-near-by',
               params: {

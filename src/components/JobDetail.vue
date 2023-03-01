@@ -176,22 +176,18 @@ export default defineComponent({
       }
       else if ('keyValuePortalApplyUrl449' in this.selectedJob)
       {
-        console.error('pass par la');
         link = this.selectedJob.keyValuePortalApplyUrl449;
       }
       else if ('keyValuePortalApplyUrl1143' in this.selectedJob)
       {
-        console.error('pass par la1');
         link = this.selectedJob.keyValuePortalApplyUrl1143;
       }
       else if ('keyValuePortalApplyUrl1599' in this.selectedJob)
       {
-        console.error('pass par la2');
         link = this.selectedJob.keyValuePortalApplyUrl1599;
       }
       else if ('applyEmail' in this.selectedJob)
       {
-        console.error('pass par la3');
         link = 'mailto:' + this.selectedJob.applyEmail;
       }
       console.log('Link', link);
