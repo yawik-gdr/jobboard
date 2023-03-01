@@ -84,7 +84,7 @@ export default defineComponent({
   data()
   {
     return {
-      loading: false,
+      // loading: false,
       pagination: {
         sortBy: 'date',
         descending: false,
@@ -93,8 +93,8 @@ export default defineComponent({
         rowsNumber: 10
       },
       rows: [],
-      jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
-      jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`
+      // jobsUrl: `${process.env.YAWIK_EXTERNAL_SEARCH_URL}`,
+      // jobDetailUrl: `${process.env.YAWIK_EXTERNAL_JOB_URL}`
     };
   },
   computed:
@@ -122,7 +122,7 @@ export default defineComponent({
       });
     },
     getJobs(pagination = { pagination: this.pagination })
-    {
+    { /*
       console.log('URL:', this.jobsUrl);
       this.loading = true;
       this.$axios.get(this.jobsUrl, {
@@ -139,6 +139,7 @@ export default defineComponent({
       }
       ).then(response =>
       {
+        console.log(response.data);
         this.rows = response.data.grouped.companyTag.groups;
         this.companies = response.data.facet_counts.facet_fields.companyTag;
 
@@ -147,7 +148,7 @@ export default defineComponent({
       {
         this.loading = false;
       });
-    },
+    */ },
     setPagination(pagination)
     {
       this.pagination = {

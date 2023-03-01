@@ -1,126 +1,163 @@
 ---
-title: Datenschutzerklärung
-desc: wir schützen private Daten.
+title: Déclaration de confidentialité
+desc: nous protégeons les données privées.
 components:
 - pages/infos/TestComponent
 ---
 
-# Datenschutzerklärung
+## POLITIQUE DE CONFIDENTIALITÉ
 
-Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
 
-Carsten Bleek
-Diemelstrasse 2-4
-60486 Frankfurt am Main
+GDR GPL (CNRS)
 
-## Ihre Betroffenenrechte
 
-Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:
+- Le but de cette politique de confidentialité
 
-* Recht auf Auskunft ([Art. 15 DSGVO](https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Betroffenenrechte/Betroffenenrechte_Auskunftsrecht.html)),
-* Recht auf Korrektur ([Art. 16 DSGVO](https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Betroffenenrechte/Betroffenenrechte_Berichtigung.html)),
-* Recht auf Löschung ([Art. 17 DSGVO](https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Betroffenenrechte/Betroffenenrechte_L%C3%B6schung_Vergessenwerden.html)),
-* Recht auf Einschränkung der Bearbeitung ([Art. 18 DSGVO](https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Betroffenenrechte/Betroffenenrechte_Einschr%C3%A4nkungBearbeitung.html)),
-* Recht auf Widerspruch ([Art. 21 DSGVO](https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Betroffenenrechte/Betroffenenrechte_Widerspruch.html))
-* Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).
+- Le but de cette politique de confidentialité est d'informer les utilisateurs de notre site des données personnelles que nous recueillerons ainsi que les informations suivantes, le cas échéant :
 
-Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.
+  - Les données personnelles que nous recueillerons
+  - L’utilisation des données recueillies
+  - Qui a accès aux données recueillies
+  - Les droits des utilisateurs du site
+  - La politique de cookies du site
+  - Cette politique de confidentialité fonctionne parallèlement aux conditions générales d’utilisation de notre site.
 
-Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.
+# Lois applicables
 
-Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: [https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html](https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html).
+Conformément au Règlement général sur la protection des données (RGPD), cette politique de confidentialité est conforme aux règlements suivants.
 
-### Drittlandtransfer:
+Les données à caractère personnel doivent être :
 
-Es werden keine Daten an Drittländer übertragen.
+- traitées de manière licite, loyale et transparente au regard de la personne concernée (licéité, loyauté, transparence) ;
+- collectées pour des finalités déterminées, explicites et légitimes, et ne pas - être traitées ultérieurement d'une manière incompatible avec ces finalités; le traitement ultérieur à des fins archivistiques dans l'intérêt public, à des fins de recherche scientifique ou historique ou à des fins statistiques n'est pas considéré, conformément à l'article 89, paragraphe 1, comme incompatible avec les finalités initiales (limitation des finalités) ;
+- adéquates, pertinentes et limitées à ce qui est nécessaire au regard des finalités pour lesquelles elles sont traitées (minimisation des données) ;
+- exactes et, si nécessaire, tenues à jour; toutes les mesures raisonnables doivent être prises pour que les données à caractère personnel qui sont inexactes, eu égard aux finalités pour lesquelles elles sont traitées, soient effacées ou rectifiées sans tarder (exactitude) ;
+- conservées sous une forme permettant l'identification des personnes concernées pendant une durée n'excédant pas celle nécessaire au regard des finalités pour lesquelles elles sont traitées; les données à caractère personnel peuvent être conservées pour des durées plus longues dans la mesure où elles seront traitées exclusivement à des fins archivistiques dans l'intérêt public, à des fins de recherche scientifique ou historique ou à des fins statistiques conformément à l'article 89, paragraphe 1, pour autant que soient mises en œuvre les mesures techniques et organisationnelles appropriées requises par le règlement afin de garantir les droits et libertés de la personne concernée (limitation de la conservation) ;
+- traitées de façon à garantir une sécurité appropriée des données à caractère personnel, y compris la protection contre le traitement non autorisé ou illicite et contre la perte, la destruction ou les dégâts d'origine accidentelle, à l'aide de mesures techniques ou organisationnelles appropriées (intégrité et confidentialité).
 
-Folgende Datenschutzgarantien liegen vor:
+Le traitement n'est licite que si, et dans la mesure où, au moins une des conditions suivantes est remplie :
 
-## Registrierung auf unserer Website
+- la personne concernée a consenti au traitement de ses données à caractère personnel pour une ou plusieurs finalités spécifiques ;
+- le traitement est nécessaire à l'exécution d'un contrat auquel la personne concernée est partie ou à l'exécution de mesures précontractuelles prises à la demande de celle-ci ;
+- le traitement est nécessaire au respect d'une obligation légale à laquelle le responsable du traitement est soumis ;
+- le traitement est nécessaire à la sauvegarde des intérêts vitaux de la personne concernée ou d'une autre personne physique ;
+- le traitement est nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'exercice de l'autorité publique dont est investi le responsable du traitement ;
+- le traitement est nécessaire aux fins des intérêts légitimes poursuivis par le responsable du traitement ou par un tiers, à moins que ne prévalent les intérêts ou les libertés et droits fondamentaux de la personne concernée qui exigent une protection des données à caractère personnel, notamment lorsque la personne concernée est un enfant.
 
-### Art und Zweck der Verarbeitung:
+Pour les résidents de l’État de Californie, cette politique de confidentialité vise à se conformer à la California Consumer Privacy Act (CCPA). S’il y a des incohérences entre ce document et la CCPA, la législation de l’État s’appliquera. Si nous constatons des incohérences, nous modifierons notre politique pour nous conformer à la loi pertinente.
 
-Für die Registrierung auf unserer Website benötigen wir einige personenbezogene Daten, die über eine Eingabemaske an uns übermittelt werden.
+# Consentement
 
-Zum Zeitpunkt der Registrierung werden zusätzlich folgende Daten erhoben:
+Les utilisateurs conviennent qu’en utilisant notre site, ils consentent à :
 
-* E-Mail
-* Password
-* Name
+- les conditions énoncées dans la présente politique de confidentialité et
+la collecte, l’utilisation et la conservation des données énumérées dans la présente politique.
 
-Ihre Registrierung ist für das Bereithalten bestimmter Inhalte und Leistungen auf unserer Website erforderlich.
+## Données personnelles que nous collectons
 
-### Rechtsgrundlage:
+### Données collectées automatiquement
 
-Die Verarbeitung der bei der Registrierung eingegebenen Daten erfolgt auf Grundlage einer Einwilligung des Nutzers (Art. 6 Abs. 1 lit. a DSGVO).
+Nous ne collectons aucune donnée automatiquement sur notre site.
 
-### Empfänger:
+### Données recueillies de façon non automatique
 
-Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Website als Auftragsverarbeiter tätig werden.
+Nous pouvons également collecter les données suivantes lorsque vous effectuez certaines fonctions sur notre site :
 
-### Speicherdauer:
+- Prénom et nom
+- Âge
+- Date de naissance
+- Sexe
+- Email
+- Numéro de téléphone
+- Domicile
 
-Daten werden in diesem Zusammenhang nur verarbeitet, solange die entsprechende Einwilligung vorliegt.
+Ces données peuvent être recueillies au moyen des méthodes suivantes :
 
-### Bereitstellung vorgeschrieben oder erforderlich:
+- formulaire
 
-Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig, allein auf Basis Ihrer Einwilligung. Ohne die Bereitstellung Ihrer personenbezogenen Daten können wir Ihnen keinen Zugang auf unsere angebotenen Inhalte gewähren.
+Veuillez noter que nous ne collectons que les données qui nous aident à atteindre l’objectif énoncé dans cette politique de confidentialité. Nous ne recueillerons pas de données supplémentaires sans vous en informer au préalable.
 
-## Verwendung von Google Maps
+## Comment nous utilisons les données personnelles
 
-Auf dieser Website nutzen wir das Angebot von Google Maps. Google Maps wird von Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (nachfolgend „Google“) betrieben. Dadurch können wir Ihnen interaktive Karten direkt in der Webseite anzeigen und ermöglichen Ihnen die komfortable Nutzung der Karten-Funktion.<br>Nähere Informationen über die Datenverarbeitung durch Google können Sie den Google-Datenschutzhinweisen entnehmen: <a href="https://policies.google.com/privacy" rel="noopener nofollow" target="_blank">https://policies.google.com/privacy</a>. Dort können Sie im Datenschutzcenter auch Ihre persönlichen Datenschutz-Einstellungen verändern.
+Les données personnelles recueillies sur notre site seront utilisées uniquement aux fins précisées dans la présente politique ou indiquées sur les pages pertinentes de notre site. Nous n’utiliserons pas vos données au-delà de ce que nous divulguerons.
 
-Ausführliche Anleitungen zur Verwaltung der eigenen Daten im Zusammenhang mit Google-Produkten finden Sie hier: <a href="https://www.dataliberation.org/" rel="noopener nofollow" target="_blank">https://www.dataliberation.org</a>
+Les données que nous recueillons lorsque l’utilisateur exécute certaines fonctions peuvent être utilisées aux fins suivantes :
 
-Durch den Besuch der Website erhält Google Informationen, dass Sie die entsprechende Unterseite unserer Webseite aufgerufen haben. Dies erfolgt unabhängig davon, ob Google ein Nutzerkonto bereitstellt, über das Sie eingeloggt sind, oder ob keine Nutzerkonto besteht. Wenn Sie bei Google eingeloggt sind, werden Ihre Daten direkt Ihrem Konto zugeordnet.
+mise en relation (recherche d'emploi)
 
-Wenn Sie die Zuordnung in Ihrem Profil bei Google nicht wünschen, müssen Sie sich vor Aktivierung des Buttons bei Google ausloggen. Google speichert Ihre Daten als Nutzungsprofile und nutzt sie für Zwecke der Werbung, Marktforschung und/oder bedarfsgerechter Gestaltung seiner Websites. Eine solche Auswertung erfolgt insbesondere (selbst für nicht eingeloggte Nutzer) zur Erbringung bedarfsgerechter Werbung und um andere Nutzer des sozialen Netzwerks über Ihre Aktivitäten auf unserer Website zu informieren. Ihnen steht ein Widerspruchsrecht zu gegen die Bildung dieser Nutzerprofile, wobei Sie sich zur Ausübung dessen an Google richten müssen.
 
-### Widerruf der Einwilligung:
+## Avec qui nous partageons les données personnelles
 
-Vom Anbieter wird derzeit keine Möglichkeit für einen einfachen Opt-out oder ein Blockieren der Datenübertragung angeboten. Wenn Sie eine Nachverfolgung Ihrer Aktivitäten auf unserer Website verhindern wollen, widerrufen Sie bitte im Cookie-Consent-Tool Ihre Einwilligung für die entsprechende Cookie-Kategorie oder alle technisch nicht notwendigen Cookies und Datenübertragungen. In diesem Fall können Sie unsere Website jedoch ggfs. nicht oder nur eingeschränkt nutzen.
+### Employés
 
-## Social Plugins
+Nous pouvons divulguer à tout membre de notre organisation les données utilisateur dont il a raisonnablement besoin pour réaliser les objectifs énoncés dans la présente politique.
 
-Auf unserer Website werden Social Plugins der unten aufgeführten Anbieter eingesetzt. Die Plugins können Sie daran erkennen, dass sie mit dem entsprechenden Logo gekennzeichnet sind.
+### Tierces parties
+Nous pouvons partager les données utilisateur avec les tiers suivants :
 
-Über diese Plugins werden unter Umständen Informationen, zu denen auch personenbezogene Daten gehören können, an den Dienstebetreiber gesendet und ggf. von diesem genutzt. Wir verhindern die unbewusste und ungewollte Erfassung und Übertragung von Daten an den Diensteanbieter durch eine 2-Klick-Lösung. Um ein gewünschtes Social Plugin zu aktivieren, muss dieses erst durch Klick auf den entsprechenden Schalter aktiviert werden. Erst durch diese Aktivierung des Plugins wird auch die Erfassung von Informationen und deren Übertragung an den Diensteanbieter ausgelöst. Wir erfassen selbst keine personenbezogenen Daten mittels der Social Plugins oder über deren Nutzung.
+- aucun
 
-Wir haben keinen Einfluss darauf, welche Daten ein aktiviertes Plugin erfasst und wie diese durch den Anbieter verwendet werden. Derzeit muss davon ausgegangen werden, dass eine direkte Verbindung zu den Diensten des Anbieters ausgebaut wird sowie mindestens die IP-Adresse und gerätebezogene Informationen erfasst und genutzt werden. Ebenfalls besteht die Möglichkeit, dass die Diensteanbieter versuchen, Cookies auf dem verwendeten Rechner zu speichern. Welche konkreten Daten hierbei erfasst und wie diese genutzt werden, entnehmen Sie bitte den Datenschutzhinweisen des jeweiligen Diensteanbieters. Hinweis: Falls Sie zeitgleich bei Facebook angemeldet sind, kann Facebook Sie als Besucher einer bestimmten Seite identifizieren.
+Nous pouvons partager les données utilisateur avec des tiers aux fins suivantes :
 
-Wir haben auf unserer Website die Social-Media-Buttons folgender Unternehmen eingebunden:
+- aucun
 
-* Linkedin
-* Google
-* Github
 
-## SSL-Verschlüsselung
+Les tiers ne seront pas en mesure d’accéder aux données des utilisateurs au-delà de ce qui est raisonnablement nécessaire pour atteindre l’objectif donné.
 
-Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
+## Autres divulgations
 
------
+Nous nous engageons à ne pas vendre ou partager vos données avec des tiers, sauf dans les cas suivants :
 
-## Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO
+- si la loi l'exige
+- si elle est requise pour toute procédure judiciaire pour prouver ou protéger nos droits légaux
+- Si vous suivez des hyperliens de notre site vers un autre site, veuillez noter que nous ne sommes pas responsables et n’avons pas de contrôle sur leurs politiques et pratiques de confidentialité.
 
-### Einzelfallbezogenes Widerspruchsrecht
+## Combien de temps nous stockons les données personnelles
 
-Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.
+Les données des utilisateurs seront conservées pour une durée de :3 ans
 
-Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
+Nous veillerons à ce que les utilisateurs soient avisés si leurs données sont conservées plus longtemps que cette durée.
 
-### Empfänger eines Widerspruchs
+Comment nous protégeons vos données personnelles
 
-* Carsten Bleek
+- sécurité Web, https,
 
-----
+Alors que nous prenons toutes les précautions raisonnables pour nous assurer que nos données d’utilisateur sont sécurisées et que les utilisateurs sont protégés, il reste toujours du risque de préjudice. L’Internet en sa totalité peut être, parfois, peu sûr et donc nous sommes incapables de garantir la sécurité des données des utilisateurs au-delà de ce qui est raisonnablement pratique.
 
-## Änderung unserer Datenschutzbestimmungen
+## Mineurs
 
-Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+Le RGPD précise que les personnes de moins de 15 ans sont considérées comme des mineurs aux fins de la collecte de données. Les mineurs doivent avoir le consentement d’un représentant légal pour que leurs données soient recueillies, traitées et utilisées.
 
-## Fragen an den Datenschutzbeauftragten
+## Vos droits en tant qu’utilisateur
 
-Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
+En vertu du RGPD, les utilisateurs ont les droits suivants en tant que personnes concernées :
 
-<em>Die Datenschutzerklärung wurde mithilfe der activeMind AG erstellt, den Experten für <a href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/" target="_blank" rel="noopener">externe Datenschutzbeauftragte</a> (Version #2020-09-30).</em>
+- droit d’accès
+- droit de rectification
+- droit à l’effacement
+- droit de restreindre le traitement
+- droit à la portabilité des données
+- droit d'objection
+- Vous trouverez de plus amples informations sur ces droits au chapitre 3 (art 12-23) du RGPD.
 
+## Comment modifier, supprimer ou contester les données recueillies
+
+Si vous souhaitez que vos renseignements soient supprimés ou modifiés d’une façon ou d’une autre, veuillez communiquer avec notre agent de protection de la vie privée ici :
+
+- Olivier Barais
+- Campus de Beaulieu
+- barais@irisa.fr
+
+### Modifications
+
+Cette politique de confidentialité peut être modifiée à l’occasion afin de maintenir la conformité avec la loi et de tenir compte de tout changement à notre processus de collecte de données. Nous recommandons à nos utilisateurs de vérifier notre politique de temps à autre pour s’assurer qu’ils soient informés de toute mise à jour. Au besoin, nous pouvons informer les utilisateurs par courriel des changements apportés à cette politique.
+
+## Contact
+
+Si vous avez des questions à nous poser, n’hésitez pas à communiquer avec nous en utilisant ce qui suit :
+barais@irisa.fr
+
+
+Date d’entrée en vigueur : le 1 mars 2023
+
+© 2002-2023, DocumentsLégaux™ (Sequiter Inc.)

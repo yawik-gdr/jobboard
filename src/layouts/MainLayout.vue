@@ -7,8 +7,7 @@
     <q-footer bordered class="bg-white text-primary">
       <q-tabs no-caps active-color="primary" indicator-color="transparent" class="text-grey">
         <q-route-tab name="imprint" :label="$t('imprint')" to="/info/de/impressum" />
-        <q-route-tab name="privary" :label="$t('privacy')" to="/info/de/privacy" />
-        <q-route-tab name="terms" :label="$t('terms')" to="/info/de/terms" />
+        <q-route-tab name="privacy" :label="$t('privacy')" to="/info/de/privacy" />
         <div>{{ $t('Quasar v') + $q.version }}</div>
       </q-tabs>
     </q-footer>
@@ -42,7 +41,7 @@
         color="secondary"
         :label="$t('create-job')"
         type="a"
-        href="https://jobwizard.yawik.org"
+        :href="linkhost"
       />
     </q-page-sticky>
   </q-layout>
@@ -108,23 +107,17 @@ export default defineComponent({
     {
       const linksList = [
 
-        {
+        /* {
           title: this.$t('form_title'),
           caption: this.$t('form_caption'),
           icon: 'feed',
           link: 'https://form.yawik.org'
-        },
+        }, */
         {
           title: this.$t('jobs_title'),
           caption: this.$t('jobs_caption'),
           icon: 'view_list',
-          link: 'https://jobwizard.yawik.org'
-        },
-        {
-          title: this.$t('docs'),
-          caption: 'yawik',
-          icon: 'auto_stories',
-          link: 'https://jobwizard.yawik.org/docs'
+          link: `${process.env.YAWIK_POST_URL}`
         },
         {
           title: this.$t('src_title'),
@@ -143,7 +136,7 @@ export default defineComponent({
       true,
       /^.*\.md$/
     );
-
+    this.linkhost = `${process.env.YAWIK_POST_URL}`;
     const arr = illustrations.keys();
     const records = arr.slice(Math.max(arr.length - 6, 0)).reverse();
 
@@ -173,7 +166,7 @@ export default defineComponent({
   "jobs": "Jobs",
   "create-job": "Create Job",
   "infos-for-applicant": "Candidate information",
-  "jobs_title": "Ad management",
+  "jobs_title": "Jobs annoucement management",
   "jobs_caption": "Create, manage and publish jobs",
   "form_title": "Application forms",
   "form_caption": "Structured applications by mail",

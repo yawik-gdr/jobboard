@@ -34,6 +34,8 @@
                 size="xl"
                 type="a"
                 :href="apply"
+                target="_blank"
+                rel="noopener noreferrer"
                 color="secondary"
               >
                 {{ $t('btn.apply') }}
@@ -164,8 +166,37 @@ export default defineComponent({
   {
     apply()
     {
-      const id = this.$route.params.id;
-      return process.env.YAWIK_APPLY_URL + '/?job=' + id;
+      /*const id = this.$route.params.id;
+      return process.env.YAWIK_APPLY_URL + '/?job=' + id;*/
+      let link = '';
+
+      if ('keyValuePortalApplyUrl314' in this.selectedJob)
+      {
+        link = this.selectedJob.keyValuePortalApplyUrl314;
+      }
+      else if ('keyValuePortalApplyUrl449' in this.selectedJob)
+      {
+        console.error('pass par la');
+        link = this.selectedJob.keyValuePortalApplyUrl449;
+      }
+      else if ('keyValuePortalApplyUrl1143' in this.selectedJob)
+      {
+        console.error('pass par la1');
+        link = this.selectedJob.keyValuePortalApplyUrl1143;
+      }
+      else if ('keyValuePortalApplyUrl1599' in this.selectedJob)
+      {
+        console.error('pass par la2');
+        link = this.selectedJob.keyValuePortalApplyUrl1599;
+      }
+      else if ('applyEmail' in this.selectedJob)
+      {
+        console.error('pass par la3');
+        link = 'mailto:' + this.selectedJob.applyEmail;
+      }
+      console.log('Link', link);
+      console.log('Link', this.selectedJob);
+      return link;
     }
   },
   watch: {

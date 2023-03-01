@@ -73,24 +73,20 @@ export default defineComponent({
           val: '10 km'
         },
         {
-          id: 20,
-          val: '20 km'
-        },
-        {
-          id: 30,
-          val: '30 km'
-        },
-        {
-          id: 40,
-          val: '40 km'
-        },
-        {
           id: 50,
           val: '50 km'
         },
         {
           id: 100,
           val: '100 km'
+        },
+        {
+          id: 500,
+          val: '500 km'
+        },
+        {
+          id: 1000,
+          val: '1000 km'
         }
       ]
     };
@@ -152,7 +148,7 @@ export default defineComponent({
         fields: ['formatted_address', 'address_components', 'geometry'],
         types: ['(cities)']
       });
-      this.googleSearchBox.setComponentRestrictions({ country: ['de', 'at'] });
+      this.googleSearchBox.setComponentRestrictions({ country: ['fr'] });
       this.googleSearchBox.addListener('place_changed', () =>
       {
         const place = this.googleSearchBox.getPlace();
@@ -167,15 +163,18 @@ export default defineComponent({
 
         searchJobs()
         {
+          console.error('jobs-near-by', this.jobQuery);
+
           if (this.location !== null && this.location !== '')
           {
-            console.log('jobs-near-by');
+            console.error('jobs-near-by', this.distance.id);
+
             this.$router.push({
               name: 'jobs-near-by',
               params: {
                 q: this.jobQuery || '*',
                 location: this.location,
-                distance: this.distance || 20,
+                distance: this.distance.id || 20,
                 coordinates: JSON.stringify(this.coordinates),
               }
             });

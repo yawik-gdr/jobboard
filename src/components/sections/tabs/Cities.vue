@@ -124,9 +124,6 @@ export default {
   "en": {
   "cities": "Cities and regions with IT jobs",
   },
-  "de": {
-  "cities": "Städte und Regionen mit IT Jobs",
-  },
   "fr": {
   "cities": "Villes et régions avec emplois IT",
   },

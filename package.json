@@ -13,7 +13,10 @@
     "lintfix": "node --preserve-symlinks --preserve-symlinks-main ./node_modules/eslint/bin/eslint --ext .js,.vue src --fix",
     "test:e2e": "cross-env E2E_TEST=true start-test \"quasar dev\" http-get://localhost:8080 \"cypress open\"",
     "test:e2e:ci": "cross-env E2E_TEST=true start-test \"quasar dev\" http-get://localhost:8080 \"cypress run\"",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "docker:build":"docker build --no-cache -t barais/jobboard .",
+    "docker:push":"docker push barais/jobboard"
+
   },
   "dependencies": {
     "@quasar/extras": "^1.12.4",

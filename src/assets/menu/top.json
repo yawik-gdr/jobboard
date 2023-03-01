@@ -16,22 +16,6 @@
         ]
     },
     {
-        "icon": "md5-home",
-        "label": "general",
-        "items": [
-            {
-                "icon": "img:../../yawik_logo-mobile.svg",
-                "label": "about-yawik",
-                "to": "/about-yawik",
-                "type": "info"
-            },
-            {
-                "icon": "auto_stories",
-                "label": "documentation"
-            }
-        ]
-    },
-    {
         "icon": "home",
         "label": "for-companies",
         "items": [
@@ -40,13 +24,6 @@
                 "label": "create-jobs",
                 "to": "/stellenanzeige-erstellen",
                 "type": "info"
-            },
-            {
-                "icon": "euro",
-                "label": "prices",
-                "to": "/prices",
-                "type": "info"
-
             }
         ]
     }

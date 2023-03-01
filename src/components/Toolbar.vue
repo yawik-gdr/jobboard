@@ -86,7 +86,7 @@ export default defineComponent({
 {
   "en": {
     "for-applicants": "for applicants",
-    "for-companies": "for companies",
+    "for-companies": "for labs/companies",
     "for-developers": "for software developers",
     "create-jobs": "create job posting",
     "find-jobs": "find jobs",
@@ -96,21 +96,9 @@ export default defineComponent({
     "about-yawik": "about Yawik",
     "documentation": "Documentation"
   },
-  "de": {
-    "for-applicants": "für Bewerber",
-    "for-companies": "für Unternehmen",
-    "for-developers": "für Software-Entwickler",
-    "create-jobs": "Stellenanzeige anlegen",
-    "find-jobs": "Jobs finden",
-    "general":" Allgemein",
-    "prices": "Preise",
-    "remembered-jobs": "gespeicherte Jobs",
-    "about-yawik": "über Yawik",
-    "documentation": "Dokumentation"
-  },
   "fr": {
     "for-applicants": "pour les candidats",
-    "for-companies": "pour les entreprises",
+    "for-companies": "pour les laboratoires/entreprises",
     "for-developers": "pour les développeurs de logiciels",
     "create-jobs": "Créer une offre d'emploi",
     "find-jobs": "Trouver des jobs",

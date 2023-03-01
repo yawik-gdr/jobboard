@@ -20,8 +20,10 @@
       </q-carousel-slide>
     </q-carousel>
     <search-section style="min-height: 700px; width: 100%;" class="full-width" />
+    <!--
     <advantages />
     <news-and-topics />
+-->
   </q-page>
 </template>
 
@@ -29,8 +31,8 @@
 import { defineComponent } from 'vue';
 import SearchSection from 'src/components/sections/SearchSection.vue';
 import SearchForm from 'src/components/SearchForm.vue';
-import Advantages from 'src/components/sections/Advantages.vue';
-import NewsAndTopics from 'src/components/sections/NewsAndTopics.vue';
+// import Advantages from 'src/components/sections/Advantages.vue';
+// import NewsAndTopics from 'src/components/sections/NewsAndTopics.vue';
 
 export default defineComponent({
   name: 'Index',
@@ -43,8 +45,8 @@ export default defineComponent({
   components: {
     SearchForm,
     SearchSection,
-    Advantages,
-    NewsAndTopics
+    //    Advantages,
+    //    NewsAndTopics
   },
   computed:
   {

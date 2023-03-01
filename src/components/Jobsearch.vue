@@ -132,7 +132,7 @@ export default {
         rowsNumber: 10
       },
       grid: false,
-      distance: ['5 km', '10 km', '20 km', '50 km', '100 km'],
+      distance: ['5 km', '10 km', '20 km', '50 km', '100 km', '500 km', '1000 km'],
       rowsPerPageOptions: [5, 10, 20, 50],
       columns: [
         {
@@ -243,7 +243,7 @@ export default {
       const queryStr = Object.keys(query)
         .map(k => `${k}=${encodeURIComponent(query[k])}`)
         .join('&');
-
+      console.error('queryStr', queryStr);
       this.$axios
         .get(this.host + '?' + queryStr)
         .then(response =>

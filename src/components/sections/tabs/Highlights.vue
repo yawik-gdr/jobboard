@@ -148,15 +148,15 @@ export default defineComponent({
 {
   "en": {
     "search-placeholder": "Job title, Company or Location",
-    "first-ad": "Place your first ad! Free of charge.",
+    "first-ad": "",
   },
   "de": {
     "search-placeholder": "Anzeigentitel, Firma oder Ort",
     "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
   },
   "fr": {
-    "search-placeholder": "Anzeigentitel, Firma oder Ort",
-    "first-ad": "Schalten sie ihre erste Anzeige! Kostenlos.",
+    "search-placeholder": "Emploi, Laboratoire, ou Lieu",
+    "first-ad": "",
   },
 }
 </i18n>

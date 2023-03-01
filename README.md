@@ -1,41 +1,15 @@
 # Yawik Jobboard
 
-The Yawik Jobboard is a portal for real job ads and serves as an example of a [Quasar](https://quasar.dev) app that can be used as a job board. 
+This project is a fork of the Yawik jobboard.
 
-All job advertisements are "real". Posting ads is free of charge. All ads placed are manually checked and activated.
-
-## Install
-```bash
-git clone git@gitlab.com:yawik/jobboard.git jobboard && cd $_
-yarn
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-yarn dev
-```
-
-### Lint the files
-```bash
-yarn lint
-```
-to fix lint errors
-
-```bash
-yarn lintfix
-```
-
-### Build the app for production
-```bash
-quasar build
-```
+The Yawik Jobboard is a portal for real job ads and serves as an example of a [Quasar](https://quasar.dev) app that can be used as a job board.
 
 ### Customize
 
-The jobboard is .env-aware. All possible values are locatewd in `.env`. 
+The jobboard is .env-aware. All possible values are locatewd in `.env`.
 Values in `.env.local` overwrite those in `.env`
 
-| Name                         | Value                                      | 
+| Name                         | Value                                      |
 |------------------------------|--------------------------------------------|
 | YAWIK_BACKGROUND             | Background Image on Startpage              |
 | YAWIK_JOB_URL                | Endpoint for job details                   |

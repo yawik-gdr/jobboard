@@ -171,11 +171,11 @@ export default defineComponent({
       console.log('not undefined');
       this.isInternal = this.$route.params.internal === '1';
     }
-    console.log(this.isInternal);
+    console.error(this.isInternal);
   },
   mounted()
   {
-    this.getInternalJobs();
+    //  this.getInternalJobs();
   },
   methods:
       {
@@ -189,68 +189,177 @@ export default defineComponent({
         {
           const routeName = this.$route.name;
           let params = {};
+          let selectedjob = false;
           switch (routeName)
           {
             case 'jobs':
               params = {
-                q: '*',
-                start: this.start,
-                rows: this.rowsPerPage,
-                sort: 'score desc,random_123 desc',
+                sort: ['jobTitle:asc'],
+                filters: {
+                  q: '*'
+                },
+                pagination: {
+                  pageSize: this.rowsPerPage,
+                  page: this.start
+                }
               };
               break;
             case 'search-jobs':
               params = {
-                q: this.query,
-                start: this.start,
-                rows: this.rowsPerPage,
-                sort: 'score desc,random_123 desc',
+                sort: ['jobTitle:asc'],
+                filters: {
+                  q: this.$route.params.q
+                },
+                pagination: {
+                  pageSize: this.rowsPerPage,
+                  page: this.start
+                }
+
               };
               break;
             case 'selected-job':
+              selectedjob = true;
               params = {
-                q: this.query,
-                start: this.start,
-                bq: this.selectedIndex ? '' : 'id:' + this.$route.params.id + '^1000',
-                rows: this.rowsPerPage,
-                sort: 'score desc,random_123 desc',
+                sort: ['jobTitle:asc'],
+                filters: {
+                  q: { id: this.$route.params.id }
+                },
+                pagination: {
+                  pageSize: this.rowsPerPage,
+                  page: this.start
+                }
               };
               break;
             case 'jobs-in':
               params = {
-                q: this.query,
-                start: this.start,
-                rows: this.rowsPerPage,
-                sort: 'score desc,random_123 desc',
-                fq: `regionList:${this.$route.params.region}`
+                sort: ['jobTitle:asc'],
+                filters: {
+                  q: this.$route.params.q
+                },
+                pagination: {
+                  pageSize: this.rowsPerPage,
+                  page: this.start
+                },
               };
+
               break;
+
             case 'jobs-by':
               params = {
-                q: this.query,
-                start: this.start,
-                rows: this.rowsPerPage,
-                sort: 'score desc,random_123 desc',
-                fq: `companyTag:"${this.$route.params.company}"`
+                sort: ['jobTitle:asc'],
+                filters: {
+                  q: this.$route.params.q
+                },
+                pagination: {
+                  pageSize: this.rowsPerPage,
+                  page: this.start
+                },
               };
               break;
             case 'jobs-near-by': {
-              const lat = this.coordinates.lat;
-              const lng = this.coordinates.lng;
-              const dist = this.distance.id || 20;
+              const lat = JSON.parse(this.$route.params.coordinates).lat;
+              const lng = JSON.parse(this.$route.params.coordinates).lng;
+              let dist = this.$route.params.distance || 20;
+              dist = +dist;
               params = {
-                q: this.query,
-                start: this.start,
-                rows: this.rowsPerPage,
-                sort: `geodist(lonLat,${lat},${lng}) asc, isTopJob desc`,
-                fq: `{!geofilt pt=${lat},${lng} sfield=geoLocation d=${dist}}`
+                sort: ['jobTitle:asc'],
+                filters: {
+                  q: this.$route.params.q,
+                  lat: lat,
+                  lng: lng,
+                  d: dist,
+                },
+                pagination: {
+                  pageSize: this.rowsPerPage,
+                  page: this.start
+                },
+                publicationState: 'live',
+                locale: ['en']
               };
+
               break;
             }
           }
+          console.error(selectedjob);
+          if (selectedjob)
+          {
+            const selectedId = parseInt(this.$route.params.id);
+            const i = this.internalJobs.findIndex(({ id }) => id === selectedId);
+            if (i !== -1)
+            {
+              this.emitData(this.internalJobs[i].attributes, i, '1');
+            }
+            else
+            {
+              this.$axios.get(this.internalJobsUrl, {
+                params: {
 
-          this.loading = true;
-          this.$axios.get(this.jobsUrl, {
+                  filters: {
+                    id: {
+                      $in: [selectedId],
+                    },
+                  },
+
+                  populate: 'html,logo',
+                  sort: 'publishedAt:desc'
+
+                }
+              }
+              ).then(response =>
+              {
+                this.internalJobs = response.data.data;
+                if (this.isInternal)
+                {
+                  const selectedId = parseInt(this.$route.params.id);
+                  const i = this.internalJobs.findIndex(({ id }) => id === selectedId);
+                  if (i !== -1)
+                  {
+                    this.emitData(this.internalJobs[i].attributes, i, '1');
+                  }
+                  else
+                  {
+                    this.emitData(this.internalJobs[0].attributes, 0, '1');
+                  }
+                }
+              }).finally(() =>
+              {
+                this.loading = false;
+                done(true);
+              });
+
+              //             this.emitData(this.internalJobs[0].attributes, 0, '1');
+            }
+          }
+          else
+          {
+            console.error(params);
+            this.loading = true;
+            this.$axios.get(this.jobsUrl + '/api/solrGetJobs', {
+              params: params
+            }).then(response =>
+            {
+              this.internalJobs = response.data.data;
+              if (this.isInternal)
+              {
+                const selectedId = parseInt(this.$route.params.id);
+                const i = this.internalJobs.findIndex(({ id }) => id === selectedId);
+                if (i !== -1)
+                {
+                  this.emitData(this.internalJobs[i].attributes, i, '1');
+                }
+                else
+                {
+                  this.emitData(this.internalJobs[0].attributes, 0, '1');
+                }
+              }
+            }).finally(() =>
+            {
+              this.loading = false;
+              done(true);
+            });
+          }
+
+          /*this.$axios.get(this.jobsUrl, {
             params: params
           }).then(response =>
           {
@@ -281,7 +390,7 @@ export default defineComponent({
           }).finally(() =>
           {
             this.loading = false;
-          });
+          });*/
         },
         getInternalJobs(pagination = { pagination: this.pagination })
         {
@@ -295,6 +404,7 @@ export default defineComponent({
           }
           ).then(response =>
           {
+            console.error(response);
             this.internalJobs = response.data.data;
             if (this.isInternal)
             {

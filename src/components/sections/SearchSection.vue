@@ -12,8 +12,6 @@
       >
         <q-tab class="col-md-2" name="highlights" icon="star" :label="$t('highlights')" />
         <q-tab class="col-md-2" name="industries" icon="mdi-factory" :label="$t('industries')" />
-        <q-tab class="col-md-2" name="cities" icon="location_city" :label="$t('cities')" />
-        <q-tab class="col-md-2" name="companies" icon="domain" :label="$t('companies')" />
       </q-tabs>
 
       <q-separator />
@@ -30,14 +28,6 @@
         <q-tab-panel name="industries">
           <industries />
         </q-tab-panel>
-
-        <q-tab-panel name="cities">
-          <cities :title="$t('cities')" />
-        </q-tab-panel>
-
-        <q-tab-panel name="companies">
-          <companies :title="$t('companies')" />
-        </q-tab-panel>
       </q-tab-panels>
     </q-card>
   </div>
@@ -47,17 +37,17 @@
 
 import { ref } from 'vue';
 import highlights from 'src/components/sections/tabs/Highlights.vue';
-import companies from 'src/components/sections/tabs/Customers.vue';
+// import companies from 'src/components/sections/tabs/Customers.vue';
 import industries from 'src/components/sections/tabs/Industries.vue';
-import cities from 'src/components/sections/tabs/Cities.vue';
+// import cities from 'src/components/sections/tabs/Cities.vue';
 
 export default {
   name: 'SearchSection',
   components: {
     highlights,
-    industries,
-    companies,
-    cities,
+    industries
+    //    companies,
+    //    cities,
   },
   setup()
   {
@@ -73,19 +63,13 @@ export default {
   "en": {
     "companies": "Companies",
     "cities": "Cities",
-    "industries": "Industries",
-    "highlights": "Highlights",
-  },
-  "de": {
-    "companies": "Unternehmen",
-    "cities": "Städte",
-    "industries": "Branchen",
+    "industries": "Labs",
     "highlights": "Highlights",
   },
   "fr": {
     "companies": "Entreprises",
     "cities": "Villes",
-    "industries": "Branches",
+    "industries": "Laboratoire",
     "highlights": "Points forts",
   }
 }
