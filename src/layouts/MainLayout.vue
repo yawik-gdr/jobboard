@@ -57,15 +57,15 @@ import frontMatter from 'front-matter';
 
 const metaData = {
   title: 'JobBoard',
-  titleTemplate: title => `${title} - Stellenanzeigen finden`,
+  titleTemplate: title => `${title} - Trouver des offres d'emploi`,
   meta: {
     description: {
       name: 'description',
-      content: 'Das Yawik Jobboard bietet eine Suche für Stellenanzeigen, die mit dem Jobwizard erstellt wurden'
+      content: 'Le Jobboard Yawik propose une recherche pour les offres d\'emploi créées avec le Jobwizard'
     },
     keywords: {
       name: 'keywords',
-      content: 'Jobboard, Stellenanzeigen, Stellenangebote'
+      content: 'Jobboard, annonces d\'emploi, offres d\'emploi'
     }
   },
   link: {
@@ -75,7 +75,7 @@ const metaData = {
     }
   },
   noscript: {
-    default: 'Das Yawik Jobboard benötigt Javascript'
+    default: 'Le Jobboard Yawik nécessite Javascript'
   }
 };
 
@@ -123,7 +123,7 @@ export default defineComponent({
           title: this.$t('src_title'),
           caption: this.$t('src_caption'),
           icon: 'code',
-          link: 'https://gitlab.com/yawik/jobboard'
+          link: 'https://github.com/yawik-gdr/'
         },
       ];
       return linksList;
@@ -172,7 +172,7 @@ export default defineComponent({
   "form_caption": "Structured applications by mail",
   "docs": "Documentation",
   "src_title": "Open Source",
-  "src_caption": "Sources located at Gitlab",
+  "src_caption": "Sources located at Github",
   "sightly-different-jobboard": "a slightly different job board ...",
   "differently_because": "differently, because it's 100% open source."
   },
@@ -191,7 +191,7 @@ export default defineComponent({
   "form_caption": "Bewerbungen strukturiert per Mail",
   "docs": "Dokumentation",
   "src_title": "Open Source",
-  "src_caption": "Quellen auf Gitlab",
+  "src_caption": "Quellen auf Github",
   "sightly-different-jobboard": "eine etwas andere Stellenbörse ...",
   "differently_because": "anders, weil es 100% open source ist."
   },
@@ -210,7 +210,7 @@ export default defineComponent({
   "form_caption": "Candidatures structurées par e-mail",
   "docs": "Documentation",
   "src_title": "Open Source",
-  "src_caption": "Les sources sur Gitlab",
+  "src_caption": "Les sources sur Github",
   "sightly-different-jobboard": "une bourse de l'emploi un peu différente ...",
   "differently_because": "différent, car il est 100% open source."
   }

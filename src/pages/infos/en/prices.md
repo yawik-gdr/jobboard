@@ -1,10 +1,10 @@
 ---
-title: Wieso Preise? Yawik ist kostenlos
-desc: Anzeigen schalten
+title: Quel prix ? Yawik est gratuit
+desc: Publier des annonces
 components:
 - pages/infos/TestComponent
 ---
 
-# Preise
+# Prix
 
-das erstellen, verwalten und speichern von Stellenanzeigen ist kostenlos.
+la création, la gestion et la sauvegarde des annonces d'emploi sont gratuites.
